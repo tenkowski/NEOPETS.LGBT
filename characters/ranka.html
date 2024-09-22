@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!--title-->
+  <title>RANKA | NEOPETS.LGBT</title>
+  <!--favicon-->
+  <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+  <!--current site font: Arvo-->
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+  <!-- emoji support-->
+  <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+  <!--zooms page on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="script.js"></script>
+</head>
+
+<style>
+  /* begin body css */
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    font-family: "Arvo", serif;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #9e9783;
+    height: 100%;
+  }
+
+  .container {
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  /* top css */
+  .top {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: #4d4d4d;
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 10px black;
+    font-weight: bold;
+  }
+
+  /* main css, use this when adding more boxes */
+  .main {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: #1e1e1e;
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 10px black;
+    font-weight: bold;
+  }
+
+  /* begin extra text stuff */
+  /* heading aka bigger text */
+
+
+
+  .heading {
+    font-size: 18px;
+  }
+
+  .bigtext {
+    font-size: 15px;
+  }
+
+
+  /* whitetext */
+  .whitetext {
+    color: rgb(255, 255, 255)
+  }
+
+  /* begin link colors and decorations */
+
+  a:link,
+  a:visited {
+    color: #d2b7c6;
+  }
+
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .bigtext {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .kindabigtext {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    text-align: center;
+  }
+</style>
+
+<script src="jquery-1.7.js" type="text/javascript"></script>
+<script type='text/javascript'>
+  //<![CDATA[
+  $(window).load(function () {
+    var audio;
+    var playlist;
+    var tracks;
+    var current;
+
+    init();
+    function init() {
+      current = 0;
+      audio = $('audio');
+      playlist = $('#playlist');
+      tracks = playlist.find('li a');
+      len = tracks.length - 1;
+      audio[0].volume = 1;
+      audio[0].play();
+      playlist.find('a').click(function (e) {
+        e.preventDefault();
+        link = $(this);
+        current = link.parent().index();
+        run(link, audio[0]);
+      });
+      audio[0].addEventListener('ended', function (e) {
+        current++;
+        if (current == len) {
+          current = 0;
+          link = playlist.find('a')[0];
+        } else {
+          link = playlist.find('a')[current];
+        }
+        run($(link), audio[0]);
+      });
+    }
+    function run(link, player) {
+      player.src = link.attr('href');
+      par = link.parent();
+      par.addClass('active').siblings().removeClass('active');
+      audio[0].load();
+      audio[0].play();
+    }
+  });//]]> 
+
+  $(function () {
+    $(".img-swap").live('click', function () {
+      if ($(this).attr("class") == "img-swap") {
+        this.src = this.src.replace("_sfw", "_nsfw");
+      } else {
+        this.src = this.src.replace("_nsfw", "_sfw");
+      }
+      $(this).toggleClass("on");
+    });
+  });
+
+
+</script>
+
+<!-- content starts here -->
+
+<body>
+  <div class="container">
+  </div>
+
+  <div class="top">
+    <a href="/characters">CHARACTERS</a> >> RANKA
+  </div>
+  <div class="main">
+  <br>
+  <img src="/images/characters/ranka/ranka-box.gif">
+  <br>
+  RANKA, TRANSPARENT HISSI
+<br>
+VIEW ON: <a href="https://www.neopets.com/petlookup.phtml?pet=Rankamaru">NEOPETS</a> | <a href="https://impress.openneo.net/outfits/3020254">OPENNEO</a>
+  </div>
+
+</body>
+
+</html>

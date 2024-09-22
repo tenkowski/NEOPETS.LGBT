@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!--title-->
+    <title>SOSA | NEOPETS.LGBT</title>
+    <!--favicon-->
+    <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+    <!--current site font: Arvo-->
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+    <!-- emoji support-->
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+    <!--zooms page on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+</head>
+
+<style>
+
+  /* begin body css */
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    font-family: "Arvo", serif;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(231, 150, 227);
+    height: 100%;
+
+  }
+
+  .top {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 300px;
+    background: rgb(228, 228, 228);
+    color: rgb(0, 0, 0);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 10px black;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .main {
+  position: relative;
+  top: -50%;
+  margin: 20px auto;
+  width: 60%;
+    max-width: 600px;
+  background: rgb(241, 240, 240);
+  color: rgb(0, 0, 0);
+  word-wrap: break-word;
+  padding: 10px;
+  text-align: left;
+  box-shadow: 10px 10px black;
+  font-weight: bold;
+}
+.mainy {
+  position: relative;
+  top: -50%;
+  margin: 20px auto;
+  width: 60%;
+    max-width: 600px;
+  background: rgb(241, 240, 240);
+  color: rgb(0, 0, 0);
+  word-wrap: break-word;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 10px 10px black;
+  font-weight: bold;
+}
+
+
+
+a:link,
+        a:visited {
+            color: rgb(255, 122, 199);
+            text-decoration: none;
+        }
+
+        a:hover {
+  text-decoration: underline;
+}
+
+
+        img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+</style>
+<script src="jquery-1.7.js" type="text/javascript"></script>
+<script type='text/javascript'>
+  //<![CDATA[
+  $(window).load(function () {
+    var audio;
+    var playlist;
+    var tracks;
+    var current;
+
+    init();
+    function init() {
+      current = 0;
+      audio = $('audio');
+      playlist = $('#playlist');
+      tracks = playlist.find('li a');
+      len = tracks.length - 1;
+      audio[0].volume = 1;
+      audio[0].play();
+      playlist.find('a').click(function (e) {
+        e.preventDefault();
+        link = $(this);
+        current = link.parent().index();
+        run(link, audio[0]);
+      });
+      audio[0].addEventListener('ended', function (e) {
+        current++;
+        if (current == len) {
+          current = 0;
+          link = playlist.find('a')[0];
+        } else {
+          link = playlist.find('a')[current];
+        }
+        run($(link), audio[0]);
+      });
+    }
+    function run(link, player) {
+      player.src = link.attr('href');
+      par = link.parent();
+      par.addClass('active').siblings().removeClass('active');
+      audio[0].load();
+      audio[0].play();
+    }
+  });//]]> 
+
+  $(function () {
+    $(".img-swap").live('click', function () {
+      if ($(this).attr("class") == "img-swap") {
+        this.src = this.src.replace("_sfw", "_nsfw");
+      } else {
+        this.src = this.src.replace("_nsfw", "_sfw");
+      }
+      $(this).toggleClass("on");
+    });
+  });
+
+
+</script>
+    </style>
+
+<!-- content starts here -->
+
+<body>
+
+        <div class="top">
+   <a href="characters">CHARACTER SELECT</a> >> SOSA </span>
+   </div>
+
+   </div>
+   <div class="mainy">  
+    <img src="images/characters/sosa/sosa1.jpg">
+<br>
+★ GREY / PIRATE DRAIK 
+<br>
+★ NB THEY
+<br>
+★ <a href="https://impress-2020.openneo.net/outfits/2118417" target=”_blank”>OPENNEO</a> | <a href="http://www.neopets.com/petlookup.phtml?pet=Sosarin" target=”_blank”>PETPAGE</a>
+<br>
+★ ART BY <a href="https://twitter.com/WEBPARTEEZ"target="_blank">WEBPARTEEZ </a>
+    </div>
+
+    <div class="mainy"><img src="images/gifs/draik.gif"title="Draik!"><img src="images/gifs/hatched.gif"title="Hatched from an Egg!"><img src="images/gifs/battler.gif"title="Battler!"><img src="images/gifs/royalty.gif"title="Royalty!"><img src="images/gifs/pirate.gif"title="Pirate!"><img src="images/gifs/yarr.gif"title="Yarr!"> </div>
+
+    <div class="mainy">
+      <audio controls="" id="audio" autoplay="false" tabindex="0"></audio>
+    <hr>
+    <ul id="playlist">
+      <a href="audio/sosa/waterfountain.mp3">★ Tune Yards - Water Fountain</a>
+      <br>
+      <a href="audio/sosa/boredagain.mp3">★ Buddy Ross - Bored Again!</a>
+      </a>
+      </div>
+
+      <div class="mainy"><img src="images/characters/sosa/sosa.gif"></div>
+
+<div class="main">  
+The oldest Neopet in Tenko and Co.'s friend circle. Sosa has traveled the six seas of Neopia and felled countless worthy opponents with their <a href="https://items.jellyneo.net/item/48091/"target=”_blank”>Golden Pirate Sword</a>, making them one of, if not the best Draik swordfigher in all of Neopia. <br><br>
+
+
+  Partners with <a href="/qiru">Qiru</a>, and open with <a href="/machu">Machu</a> and <a href="/tenko">Tenko</a>. Grew up with Machu on Krawk Island before Machu was forced to move off the island. Now lives with Qiru in a quaint seaside house by the shores of Meridell.
+
+</div>
+
+<div class="mainy"><img src="images/characters/sosa/sosagodgamer.png">
+  <br>
+As you can see, Sosa is kinda epic.
+
+</div>
+
+
+
+<div class="main">
+★ Sosa was raised as a Pirate Draik by their experienced and well-off pirate parents, who taught them fencing and swordfighting after realizing Sosa loved playing with pool noodles too much. 
+<br><br> 
+★ In their teen years they would go on to compete at youth fencing tournaments, wowing every instructor who had the privilege of teaching Sosa. Sosa loved to play around and experiment, and would even sneak into the Battledome to make some pocket change to put their power to the test. Ultimately, they were never caught, and raked in plenty of Neopoints and rewards for their effort. Even Machu, Sosa's favorite classmate, managed to sneak into the Battledome and cheer Sosa on.
+<br><br> 
+★ Post-high school graduation and after turning 18, they were already prepared to move out and into the college life. Now away from their parents prying eyes, they wanted to get more experimental. Using a good chunk of Neopoints they had saved up during their teenage years, they would buy a Grey Paint brush and some new clothes, and then a dress, etc... They felt much more comfortable with their new college look, yet would leave their parents unaware of the changes for the time being.
+<br> <br>
+★ Sosa would still fence and win medals at fencing tournaments as a Grey Pirate Draik. However, they would be taking a break at skirmishing at the Battledome to focus on their first year of college. And while Sosa was learning at college, so were the opponents in the Battledome. After a successful first year, summer rolled around, and Sosa would make their anticiped return to the Battledome, where they were swiftly defeated by the BD's hardened foes. Sosa would try again twice, then thrice to no avail. The game has changed, and Sosa was not ready. Sosa was not used to defeat, and they promptly cut their losses and left the Battledome, injured inside and out.
+<br><br>
+★ With a long face they flew over to their parents house, bashful and anxious about their previous losses and from showing up to their parents with this look. Sosa's Mom opened the door, paused for a moment to survey Sosa, and mouth agape ran to hug her young Draik. She hugged Sosa warmly, and called Dad over, too, who also came over for a group hug. Sosa's family had a bit of a talk, which ended up in Sosa coming out to their parents as trans, which they met with full understanding. Not only that, but after comforting Sosa they had suggested Sosa visit campus after their visit for advice on what to do next. Understandably so, their parents were getting older and had already taught Sosa the fundamentals. So off Sosa went to their campus in Meridell.
+<br><br>
+★ It was here where a new chapter in Sosa's life would begin. When Sosa arrived at the campus, it was here when they realized there had been a job fair as well as a new student orientation taking place. Sosa flew through the busy campus in search of their sports coach and favorite counselor, who had ended up calling out that day. This frustrated Sosa. They didn't want to leave empty-handed, so they lounged around a pop-up recruiting event for the Meridell Army; not actually interested in joining, but perhaps there'd be a helpful pamphlet or a hardy Neopet nearby that they could learn from. 
+<br><br>
+★ The clouds above cleared, and the rays of the unrelenting Krawk Island sun rained down on Sosa. In need of a place to cool down, Sosa picked up a pamplet and read it while flying to the nearest place away from the sun. Turns out, that pamphlet they had picked up had little to offer but a web link and an email for the Meridell Army. And before Sosa could put this pamplet down, their feet kicked an unsuspecting Lutari on the ground who was also busy reading the pamphlet. "OOOs" were let out by passerbys who witnessed  the Lutari get a taste of Sosa's feet. The Lutari stumbled and fell on the path beneath them, and Sosa swooped down below to meet the Lutari. 
+<br><br>
+★ From Sosa's POV they had felt so terrible. They had wanted to beat down some Neopets at the Battledome, but not like this! "I'm so sorry, I'm so sorry", Sosa whispered into the Lutari's shoulders as to not draw any more attention to the situation. Sosa's eyes, somber looking down at the kicked Lutari, quickly lit up when they noticed how chill the Lutari reacted to the situation. The Lutari chuckled, pamphlet in one hand, Sosa's hand in the other as they lifted him up. "Ah, thank you :3" the amiable Lutari said. "were you reading that dumb pamphlet too?" "Yeah! Yeah I totally was, my bad, my bad." Sosa replied, while noticing the Lutari's warm eyes and smile. "Ey, it's gettin' kinda crowded here, wanna get out of here and talk?" Sosa said while pointing to the tree shade nearby. "Mmm sure :3! And it's no problem, thanks for helping me up!" said the Lutari while gathering their things. And while the Lutari was busy gathering their things, Sosa cheeks turned rosy up at the kindness of the Lutari. They just kicked them and now the Lutari's being so nice about it. Well, he had a good first year experience with the students at Meridell, but this was the last thing Sosa would expect after a busy day.
+<br><br>
+★ The two had found shade by a tree a good distance away from the busy walkways of the campus. Sosa rested their back against the thick tree trunk while the Lutari sat criss-cross applesauce in front of Sosa. "So, what did you want to say?" the Lutari said with a sweet smile to Sosa. "I'm new here by the way so uhh, uhh oh yeah and my name's Qiru!" For someone who just had their head kicked in they still seemed to be acting awfully cute for the situation. "Huhu, I'm Sosa. Are... you sure you don't need an Ice Mote for that?" "Nono I'm totally fine!" Sosa, still awestruck, put their paw on Qiru's reddish area on their cheek. It felt warm, but not swelling or bruised. Thankfully for them both, Sosa's toeclaws didn't seem to have touched Qiru. "Mmm, you're very kind to check up on me, hehe :3" Qiru said while rubbing Sosa's paw back and forth. Sosa blushed again and smiled back at Qiru. "Sooo Qiru... *haha* ... I'm a sophomore now, you here for the new student orientation?" "Ahhh, a little bit of both really! I already finished my orientation and was kinda like, you know, stopping to look at the job booths just like you before taking the bus back to my dorm! But no rush, what brought you to campus on this summer day?" Qiru asked while cuddling up a little closer to Sosa. "Mhmhmhm... just been a long day man. My instructor and counselor dipped and I haven't been doing so hot in the Battledome, so I wanted something here to do before leaving." Sosa quietly said to Qiru while rubbing him back. "Ooo the Battledome wow! You like to fight?" "Yeah, kinda, with swords not my feet haha. It's been my thing since I was a little Draik back on Krawk Island. Lot of us get taught to swordfight over there when we're little and I was taught pretty early. Got taught by some of the best teachers and I even have some medals from Krawk Island back at my place." "Oh that's great, I'm so happy for you! I don't really do any sword things but uh I like to watch it! So you fight with your sword at the Battledome?" "Ughh..." Sosa facepalmed and smiled at the same time. "That's kinda what I'm sucking at right now, but I did fencing in my first year here at Meridell." "They have that here??? Wow, okay so I can totally catch one your matches :3!", Qiru said while resting his head on Qiru's shoulder. "Yes, yes you can~", Sosa said as they smiled and ruffled the fur on Qiru's head. "So, where were you headed to next Sosa?" "Mmm, honestly I was this close to going to my dorm to rest my head but I'm feeling pretty good with you around. Wanna come tour the rest of the campus with me?" "Gasppp yes of course! Let's get up now!"
+
+<br><br>
+---  I'M SLEEPY WRITING THIS SO WHATEVER BELOW IS UNFINISHED / LIKELY GETTING REWRITTEN IDK ---
+<br><br>
+★ And so the two Neopets walked over to the food hall to talk, have dinner, and rehydrate from being outside for so long. Sosa in fact caught such a big second wind after visiting the food hall that they felt like like giving the Battledome one last go to end the night and bring the eager Lutari with them. 
+
+
+<br><br>
+★ Sosa gave it one last go in the Battledome. On the same battlefield they lost earlier on that same day. But with a cheery Lutari they had on their mind as their mental support. And with this newfound determination came one win, and another, and... closing time was soon. The Battledome keeps record of Sosa's wins, and they were one away from reaching Premium Rank. "LET'S GOOOO SOSA I LOVE YOU!" shouted Qiru from the distance as he watched Sosa's last battle before ranking up. Sosa was near fainting, but they said nay. With Qiru on their mind they dug their sword deeper into their opponent and dealt the game-winning blow on the opponent. Sosa finally did it. They've never advanced this far in the Battledome before. And at the reception desk, Sosa was awarded a medal to commemorate attaining Premium Rank, a random Nerkmid, and unlocking Jetsam Ace at their next opponent for even more prizes. Outside the Battledome, night had fallen and the sky lit bright with dazzling stars above Meridell. And as Sosa was distracted looking up at the night sky Qiru reached his face over and stole a kiss from Sosa. Sosa invited Qiru over to their dorm later that night, showed him their medals, let him stay over the night, they started dating, they're gay just like neopets.lgbt the end :3 
+</div>
+   </body>

@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--title-->
+    <title>NEOPETS | NEOPETS.LGBT</title>
+    <!--favicon-->
+    <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+    <!--current site font: Arvo-->
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+    <!-- emoji support-->
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+    <!--zooms page on mobile devices-->
+</head>
+<!--page colors and whatnot-->
+<style>
+
+body {
+    background-color: rgb(215, 215, 215);
+    
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: rgb(189, 21, 57);
+}
+
+.bigtext {
+          color: rgb(0, 0, 0);
+          font-size: 20px;
+      }
+</style>
+
+<style>
+    * {
+  padding: 0;
+  margin: 0;
+}
+
+        /*the good stuff*/
+        
+        .cushion {
+    position: relative;
+    top: -50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    background: rgb(0, 21, 91);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+        body {
+          font-family: "Arvo", serif;
+          font-size: 14px;
+          height: 100%;
+          font-weight:bold;
+      }
+
+      .container {
+          position: relative;
+          margin: 10px;
+      }
+
+      /* main css, use this when adding more boxes */
+
+      .main {
+        position: relative;
+          top: -50%;
+          margin: 20px auto;
+          width:500px;
+          background: rgb(235, 234, 240);
+          color: rgb(0, 0, 0);
+          word-wrap: break-word;
+          padding: 5px;
+          box-shadow: 10px 10px black;
+          text-align: center;
+      }
+      .mainy {
+          position: relative;
+          top: -50%;
+          margin: 20px auto;
+          width: 500px;
+          max-width: 900px;
+          background: rgb(235, 234, 240);
+          color: rgb(0, 0, 0);
+          word-wrap: break-word;
+          padding: 5px;
+          box-shadow: 10px 10px black;
+          text-align: left;
+      }
+
+      #notice1 {
+          position: relative;
+          top: -50%;
+          margin: 20px auto;
+          width: 500px;
+          max-width: 900px;
+          background: rgb(235, 234, 240);
+          color: rgb(0, 0, 0);
+          word-wrap: break-word;
+          padding: 5px;
+          box-shadow: 10px 10px black;
+          text-align: left;
+      }
+
+      /* top  */
+      .top {
+          position: relative;
+          top: -50%;
+          margin-left: auto;
+          margin-right: auto;
+          width: 500px;
+          background-color: rgb(235, 234, 240);
+          color: rgb(0, 0, 0);
+          word-wrap: break-word;
+          padding: 10px;
+          text-align: center;
+          box-shadow: 10px 10px black;
+          font-size: 14px;
+      }
+
+
+      /* more sitewide css */
+
+      a:hover,
+      a:active {
+      text-decoration: underline;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+  }
+
+img.wide {
+    width:300px;
+    height:150px
+}
+
+  .clickable {
+  cursor: pointer; /* Change cursor to indicate clickability */
+  text-decoration: underline; /* Add underline for visual cue */
+}
+</style>
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("notice1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        document.cookie = "notice1Hidden=false"; // Set cookie to remember div is visible
+    } else {
+        x.style.display = "none";
+        document.cookie = "notice1Hidden=true"; // Set cookie to remember div is hidden
+    }
+}
+
+    // Check for existing cookie on page load
+window.onload = function() {
+    var notice1 = document.getElementById("notice1");
+    if (document.cookie.indexOf("notice1Hidden=true") !== -1) {
+        notice1.style.display = "none";
+    }
+};
+    </script>
+
+    <!-- content starts here -->
+
+<body>
+    <div class="cushion">
+    <div class="top"><a href="/">HOME</a> > NEOPETS</div>
+
+
+    <div id="notice1">
+        ⚠️ September 2024: Character pages are slowly being updated or added! Pages that are the most up to date say NEOPETS instead of CHARACTERS on the top bar. Thanks for waitin. <span class="clickable" onclick="myFunction()">[close this message]</span>
+    </div>
+    <div class="main">
+        <div class="container">
+            <a href="/tenko"><img src="/images/portraits/portrait_tenko.png"></a>
+            <a href="/vim"><img src="/images/portraits/portrait_vim.png"></a>
+            <a href="/sosa"><img src="/images/portraits/portrait_sosa.png"></a>
+            <a href="/qiru"><img src="images/portraits/portrait_qiru.png"></a>
+            <a href="/caci"><img src="images/portraits/portrait_caciwagua.png"></a>
+            <a href="/lasak"><img src="images/portraits/portrait_lasaklang.png"></a>
+            <a href="/ranka"><img src="images/portraits/portrait_rankamaru.png"></a> 
+            <a href="https://www.neopets.com/userlookup.phtml?user=lol_99"><img src="images/portraits/portrait_andmore.png"></a>
+    </div>
+</div>
+    <div class="main">
+        <div class="container">
+            <center><span class=bigtext>TENKO, BUT NOT A NEOPET</span></center>
+           
+            <a href="/roninko"><img src="images/portraits/portrait_roninko.png"></a>
+            <a href="/nekotenko"><img src="/images/portraits/portrait_nekotenko.png"></a> 
+        </div>
+    </div>
+    <div class="mainy">
+        <center><span class=bigtext>HOW TO NAVIGATE</span></center>
+        Look for these things in each page:<br><hr>
+        <u>References</u>: A glimpse at what they look like
+        <hr>
+        <u>Avatars</u>: Their personality, described in Neoboard avatars
+        <hr>
+        <u>Playlist</u>: A song or two relatable to them
+        <hr>
+        <u>Lore</u>: Stories and more to learn about them
+        <hr>
+        <u>Art</u>: Extra art goes near the bottom
+        <hr>
+        <u>Credit</u>: Links to the great artists who drew for me!
+        <hr>
+        ⚠️ Content is added irregularly, especially lore and music
+    </div>
+    <div class="mainy">
+        <center><span class=bigtext>CREDIT</span></center>
+<i>
+tenko, vim, sosa, qiru art by <a href="https://twitter.com/WEBPARTEEZ">webparteez</a> | 
+caci, lasak, ranka art by <a href="https://twitter.com/ferwanwan">ferwanwan</a> | 
+roninko art by <a href="https://twitter.com/felitech_">felitech</a> | 
+nekotenko art by <a href="https://twitter.com/muttvore">muttvore</a> | all characters painted, zapped, mutated, reincarnated, transmogrified, lgbtq-pilled and more by tenko
+
+
+</i>
+</div>
+</body>
+</html>

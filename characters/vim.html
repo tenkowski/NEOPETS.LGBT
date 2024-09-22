@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!--title-->
+  <title>VIM | NEOPETS.LGBT</title>
+  <!--favicon-->
+  <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+  <!--current site font: Arvo-->
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+  <!-- emoji support-->
+  <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+  <!--zooms page on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="script.js"></script>
+</head>
+
+<style>
+  /* begin body css */
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    font-family: "Arvo", serif;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(27, 5, 37);
+    height: 100%;
+  }
+
+  .container {
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  /* top css */
+  .top {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 10px black;
+    font-weight: bold;
+  }
+
+  /* main css, use this when adding more boxes */
+  .main {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 10px black;
+    font-weight: bold;
+  }
+
+  .mainy {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: left;
+    box-shadow: 10px 10px black;
+    font-weight: bold;
+  }
+
+  .mainy2 {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    box-shadow: 10px 10px black;
+    text-align: left;
+    font-weight: bold;
+  }
+
+
+  /* begin extra text stuff */
+  /* heading aka bigger text */
+
+
+
+  .heading {
+    font-size: 18px;
+  }
+
+  .bigtext {
+    font-size: 15px;
+  }
+
+
+  /* whitetext */
+  .whitetext {
+    color: rgb(255, 255, 255)
+  }
+
+  /* begin link colors and decorations */
+
+  a:link,
+  a:visited {
+    color: rgb(168, 102, 255);
+  }
+
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .bigtext {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .kindabigtext {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    text-align: center;
+  }
+</style>
+
+<script src="jquery-1.7.js" type="text/javascript"></script>
+<script type='text/javascript'>
+  //<![CDATA[
+  $(window).load(function () {
+    var audio;
+    var playlist;
+    var tracks;
+    var current;
+
+    init();
+    function init() {
+      current = 0;
+      audio = $('audio');
+      playlist = $('#playlist');
+      tracks = playlist.find('li a');
+      len = tracks.length - 1;
+      audio[0].volume = 1;
+      audio[0].play();
+      playlist.find('a').click(function (e) {
+        e.preventDefault();
+        link = $(this);
+        current = link.parent().index();
+        run(link, audio[0]);
+      });
+      audio[0].addEventListener('ended', function (e) {
+        current++;
+        if (current == len) {
+          current = 0;
+          link = playlist.find('a')[0];
+        } else {
+          link = playlist.find('a')[current];
+        }
+        run($(link), audio[0]);
+      });
+    }
+    function run(link, player) {
+      player.src = link.attr('href');
+      par = link.parent();
+      par.addClass('active').siblings().removeClass('active');
+      audio[0].load();
+      audio[0].play();
+    }
+  });//]]> 
+
+  $(function () {
+    $(".img-swap").live('click', function () {
+      if ($(this).attr("class") == "img-swap") {
+        this.src = this.src.replace("_sfw", "_nsfw");
+      } else {
+        this.src = this.src.replace("_nsfw", "_sfw");
+      }
+      $(this).toggleClass("on");
+    });
+  });
+
+
+</script>
+
+<!-- content starts here -->
+
+<body>
+  <div class="container">
+  </div>
+
+  <div class="top">
+    <a href="/characters">CHARACTERS</a> >> VIM
+  </div>
+  <div class="main"><img src="images/characters/vim/box_vim.gif">
+  <br>
+  <span class="bigtext">CHAOTIC NEUTRAL <br>
+    DARIGAN / STEALTHY KRAWK ♂<br>
+    <a href="https://impress-2020.openneo.net/outfits/2118418" target=”_blank”>OPENNEO </a> |
+    <a href="http://www.neopets.com/petlookup.phtml?pet=Xinvar" target=”_blank”>PETPAGE </a> </span>
+  
+    <br><br>
+  <i>A hinderance and a nuisance to Meridell and even the Darigan Citadel, his homeland. Vim harbors an ill will towards supporters of the Battle for Meridell conflict and especially Lord Darigan. He takes what the zealots of Meridell took from him by destroying and burning what they hold dear. Desipte his short fuse, he's found a place in Tenko's survey group, using his expertise from his service in Kass's army to infiltrate and obstruct the opposition. If you like what Kass believed in, he already likes you. </i>
+  </div>
+
+      <div class="main">
+        <img src="/images/gifs/krawk.gif" title="Krawk!">
+<img src="/images/gifs/minion.gif" title="Lord Kass's Minion!">
+<img src="/images/gifs/ninja.gif" title="Ninja!">
+<img src="/images/gifs/battler.gif" title="Battler!">
+<img src="/images/gifs/broken.gif" title="Broken!">
+<img src="/images/gifs/iheartslothy.gif" title="Dr. Sloth Fan!">
+<img src="/images/gifs/dariganpteri.gif" title="Edgy Icon!">
+<img src="/images/gifs/darklurker.gif" title="Edgy Icon 2!">
+<img src="/images/gifs/evilcoconut.gif" title="Edgy Icon 3!">
+<img src="/images/gifs/emo.gif" title="Emo!">
+<img src="/images/gifs/chomp.gif" title="Chomp!!">
+<img src="/images/gifs/evil2.gif" title="Evil!">
+      </div>
+
+        <div class="mainy2">
+          <center>
+          <img src="/images/other/borikrawk.png">
+          <br><br>
+          Collab playlist with <a href="https://neopets.lgbt/tenko">Tenko.</a>
+Songs at the top: listened more by Tenko. Songs at the bottom: listened more by Vim. Not a static playlist, songs swap around from time to time<br><br>
+          <audio controls="" id="audio" autoplay="false" tabindex="0"></audio>
+          </center><br>
+          <ul id="playlist">
+            <hr>
+            <br>
+          
+            <a href="audio/tenko/stackerrobot.mp3">★ NegaRen - Stacker Robot (BANDETTO & Emoticon 200X RESTACK)</a><br>
+            <a href="audio/tenko/babysohardcore.mp3"> ★ BANDETTO - baby so hardcore</a><br>
+            <a href="audio/tenko/futurefuck.mp3">★ Gynx + Srgt. Moon - Future FUCK</a> <br>
+            <a href="audio/tenko/difficult.mp3">★ Uffie - Difficult (2006 Parties Remix By SebastiAn)</a><br>
+            <a href="audio/tenko/overcome.mp3">★ Happycore - Overcome</a> <br>
+            <a href="audio/tenko/scatman.mp3">★ Scatman John - Scatman (Ski-Ba-Bop-Ba-Dop-Bop)</a> <br>
+            <a href="audio/tenko/cannibalcapital.mp3">★ Guerilla Toss - Cannibal Capital </a><br>
+            <a href="audio/tenko/vertigo.mp3">★ The Hellp - Vertigo </a><br>
+            <a href="audio/roninko/acidraindrops.mp3">★ People Under The Stairs - Acid Raindrops</a><br>
+            <a href="audio/tenko/persistence.mp3">★ King Gizzard And The Lizard Wizard - Persistence</a><br>
+            <a href="audio/vim/troublemaker.mp3">★ Chrissy Zebby Tembo - Trouble Maker</a><br>
+            <a href="audio/vim/belgrade.mp3">★ Battle Tapes - Belgrade </a> <br>
+            <a href="audio/vim/broken.mp3">★ Fox Stevenson - Broken Man</a><br>
+            <a href="audio/vim/flagpole.mp3">★ Harvey Danger - Flagpole Sitta </a><br>
+            <a href="audio/vim/losercrew.mp3">★ Pablo - Loser Crew </a><br>
+            <a href="audio/vim/sandra.mp3">★ White Fence - Sandra (When The Earth Dies) </a> <br>
+            <a href="audio/vim/PA.mp3">★ Lingua Ignota - PENNSYLVANIA FURNACE      </a>
+                
+            </div>
+            </div>
+          
+            <div class="mainy2"><span class="bigtext">TRUE FAX</span>
+              <br><br>
+              <u><span class="kindabigtext">Interacts with:</span></u>
+              <br><br> Tenko: Even though Tenko is the designated leader of the team, depending on the day it can feel like either him or Tenko has control. They butt heads often, but are never genuinely mad at each other. As Tenko is the best magic user in the team and Vim is the best physical attacker, they sometimes pick on each other's ability to lead the team to the delight or dismay of the others.
+              <br><br>
+             Sosa: Respects Sosa's Battledome prowess and regularly spars with them to practice their swordsmanship. Knows Sosa excels in one thing he lacks in, disipline. He never views himself as greater or lower than them and treats them more seriously than Tenko. 
+             <br><br>
+             Machu: No matter the day, he sees a healer in Machu first then all comes afterwards. Is quick to be put in his place by her when he takes her healing powers for granted. And it works every time. In fact, most of their time together is time spent while they're excused settling matters away from the team...
+             <br><br>
+             <u><span class="kindabigtext">Name origin:</span></u>
+             <br>
+             Vim is a Krawk with both a itchy trigger finger and ability to get shit done. This gives him the nickname of Vim. His color pallete is also similar to <a href="https://www.mariowiki.com/Vim_Factory" target="_blank">the colors of Vim Factory from this game.</a>
+             <br><br>
+             Vim's real name (name on Neopets) is Xinvar. Xinvar is a combination of the chinese character 心 <i>xīn</i> (heart) and var as in <i>variable</i>. Vim's heart towards others varies widely.  
+            </div>
+             
+  <div class="main"><img src="images/characters/vim/battle_vim.png">
+    <br>Such lack of respect of his surroundings! he doesn't seem to ever stop until he gets what he wants. one of those
+    wants being the return of his former war general lord kass. shameless! art by <a
+      href="https://twitter.com/WEBPARTEEZ" target=”_blank”>WEBPARTEEZ</a></a>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!--title-->
+  <title>TENKO | NEOPETS.LGBT</title>
+  <!--favicon-->
+  <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+  <!--current site font: Arvo-->
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+  <!-- emoji support-->
+  <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+  <!--zooms page on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<style>
+  /* begin body css */
+  body {
+    font-family: "Arvo", serif;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(82, 43, 87);
+    height: 100%;
+    background-image: url("https://neopets.lgbt/images/other/whyheurple.png");
+  }
+
+  .container {
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+
+  }
+
+  /* top css */
+  .top {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: rgb(26, 26, 26);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 10px black;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  /* main css, use this when adding more boxes */
+
+  .main {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: rgb(26, 26, 26);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    box-shadow: 10px 10px black;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .mainy {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: rgb(26, 26, 26);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    box-shadow: 10px 10px black;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .mainy2 {
+    position: relative;
+    top: -50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    max-width: 700px;
+    background: rgb(26, 26, 26);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    box-shadow: 10px 10px black;
+    text-align: center;
+    font-weight: bold;
+  }
+
+
+  /* begin link colors and decorations */
+
+  a:link,
+  a:visited {
+    color: rgb(219, 85, 195);
+  }
+
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+
+  /* span classes */
+
+  .yellowsmollertext {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .slidetotheleft {
+    text-align: left;
+  }
+
+  /* prevents images from overflowing */
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* life saver: https://stackoverflow.com/a/29307477 */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  /* javascript free collapsibles */
+  #chibiborilore {
+    display: none;
+  }
+
+  #chibiborilore:target {
+    display: block;
+  }
+
+  #chibiboristats {
+    display: none;
+  }
+
+  #chibiboristats:target {
+    display: block;
+  }
+
+  #feralborilore {
+    display: none;
+  }
+
+  #feralborilore:target {
+    display: block;
+  }
+
+  #feralboristats {
+    display: none;
+  }
+
+  #feralboristats:target {
+    display: block;
+  }
+
+  #fullanthroborilore {
+    display: none;
+  }
+
+  #fullanthroborilore:target {
+    display: block;
+  }
+
+  #fullanthroboristats {
+    display: none;
+  }
+
+  #fullanthroboristats:target {
+    display: block;
+  }
+
+  #nosey {
+    display: none
+  }
+
+  #nosey:target {
+    display: block;
+  }
+
+  #eyez {
+    display: none;
+  }
+
+  #eyez:target {
+    display: block;
+  }
+
+  #music {
+    display: none;
+  }
+
+  #music:target {
+    display: block;
+  }
+
+  #music2 {
+    display: none;
+  }
+
+  #music2:target {
+    display: block;
+  }
+
+  .button {
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: "Arvo", serif;
+    font-weight: bold;
+  }
+
+  .button5 {
+    background-color: #343434;
+    color: rgb(219, 85, 195)
+  }
+.redtext {
+  color: rgb(166, 166, 166);
+}
+</style>
+
+
+<script src="jquery-1.7.js" type="text/javascript"></script>
+<script type='text/javascript'>
+  //<![CDATA[
+  $(window).load(function () {
+    var audio;
+    var playlist;
+    var tracks;
+    var current;
+
+    init();
+    function init() {
+      current = 0;
+      audio = $('audio');
+      playlist = $('#playlist');
+      tracks = playlist.find('li a');
+      len = tracks.length - 1;
+      audio[0].volume = 1;
+      audio[0].play();
+      playlist.find('a').click(function (e) {
+        e.preventDefault();
+        link = $(this);
+        current = link.parent().index();
+        run(link, audio[0]);
+      });
+      audio[0].addEventListener('ended', function (e) {
+        current++;
+        if (current == len) {
+          current = 0;
+          link = playlist.find('a')[0];
+        } else {
+          link = playlist.find('a')[current];
+        }
+        run($(link), audio[0]);
+      });
+    }
+    function run(link, player) {
+      player.src = link.attr('href');
+      par = link.parent();
+      par.addClass('active').siblings().removeClass('active');
+      audio[0].load();
+      audio[0].play();
+    }
+  });//]]> 
+
+  $(function () {
+    $(".img-swap").live('click', function () {
+      if ($(this).attr("class") == "img-swap") {
+        this.src = this.src.replace("_sfw", "_nsfw");
+      } else {
+        this.src = this.src.replace("_nsfw", "_sfw");
+      }
+      $(this).toggleClass("on");
+    });
+  });
+
+
+</script>
+
+<!-- content starts here -->
+<!-- if needed use the code below to a box, it will make a button that "closes" the content-->
+<!--<button class="button button5"><a href="#">COLLAPSE (BACK TO TOP)</a></button>-->
+
+<body>
+  <div class="container">
+  </div>
+
+
+  <div class="top">
+    <a href="/characters">NEOPETS </a> >> TENKO
+  </div>
+
+
+
+  <div class="mainy"><img src="images/characters/tenko/box_tenkobori.gif">
+    <br>
+    TENKO, DEMONIC DARIGAN BORI <br>
+   VIEW ON: <a href="http://www.neopets.com/petlookup.phtml?pet=Tenkowski" target="_blank">NEOPETS</a> | <a href="https://impress-2020.openneo.net/outfits/2035215" target="_blank">OPENNEO </a>
+    
+  </div>
+
+  <div class="mainy">
+    <img src="/images/gifs/bori.gif" title="Bori!"><img src="/images/gifs/grumpybori.gif" title="Grumpy!"><img
+      src="/images/gifs/hic_armin.gif" title="Tiny But Tough!"><img src="/images/gifs/minion.gif"
+      title="Lord Kass's Minion!"><img src="/images/gifs/wicked.gif" title="Wicked!"><img src="/images/gifs/magical.gif"
+      title="Magic User!"><img src="/images/gifs/edna.gif" title="Friend of Edna!"><img src="/images/gifs/pwned.gif"
+      title="Pwned by The Lab Ray!"><img src="/images/gifs/groovy.gif" title="Groovy!"><img
+      src="/images/gifs/darknova.gif" title="Wand of Dark Nova User!">
+  </div>
+
+  <div class="mainy2">
+
+    <audio controls="" id="audio" autoplay="false" tabindex="0"></audio>
+    <hr>
+    <ul id="playlist">
+      <a href="/audio/tenko/powersthatb.mp3">★ Death Grips - Powers That B</a>
+        <br>
+        <a href="/audio/tenko/funnyfarm.mp3">★ Lightning Bolt - Funny Farm</a>
+        <br>
+        <a href="/audio/tenko/judgement.mp3">★ LINGUA IGNOTA - THE SACRED LINAMENT OF JUDGMENT
+        </a>
+      </div>
+  </div>
+
+  <div class="main">
+    <a href="images/characters/tenko/ref_chibi_tenkobori_tongue.png" target="_blank">
+
+      <img src="images/characters/tenko/ref_chibi_tenkobori_tongue.png"></a>
+    <br>
+    <span class="yellowsmollertext">CHIBI ANTHRO FORM BY <a href="https://twitter.com/SIXOFHEARTZ"
+        target=”_blank”>SIXOFHEARTZ</a>
+      <br>
+      PREFERRED FORM
+      <br> HEIGHT: 140cm
+      <br> BUILD: SQUISHY
+      <br> BODY: TRANSMASC
+    </span>
+    <br><br>
+    <p id="chibiborilore">
+      This is Tenko's form of choice. They are most comfortable with this body. This form is the end result of a
+      collaboration between <a href="https://bookofages.jellyneo.net/characters/33/" target=”_blank”>Edna the Witch</a>
+      and the <a href="https://bookofages.jellyneo.net/characters/400/" target=”_blank”>Lab Ray Scientist</a>.
+      <br><br>
+      Tenko had always wished a smaller, cuter anthro form. Their Full Anthro Form was strong indeed, but a Chibi Form
+      would allow Tenko to sacrifice their strength in exchange for higher intelligence. It is this form that allows
+      Tenko
+      to be what they always wanted to be, an all-powerful Darigan Bori Mage -- and they knew the right Neopets to ask
+      about this new form.
+      <br><br>
+      Edna and the Scientist were interested in this Chibi Anthro Project, and together they worked tirelessly on
+      this project. Tenko would learn about Edna's transformation magic, and the Scientist would "blueprint" this new
+      body
+      of Tenko, as well as lend the Lab Ray to Edna and Tenko for this project.
+      <br><br>
+      For their safety, Tenko's first transformation would be guided by Edna and the Scientist. The Scientist dimmed the
+      Laboratory's lights, drew all power to the Lab Ray, and zapped Tenko in a dazzling beam of light, while Edna
+      cocooned Tenko in a veil of magic to protect them from harm.
+      <br><br>
+      With starstuck eyes, Tenko emerged from the cloud of smoke -- transformed and unharmed -- all according to plan.
+      And while
+      Edna and the Scientist did their part, the unpredictable Lab Ray had changed something else about this form.
+      <br><br>
+      You see, there's an <a href="https://www.jellyneo.net/?go=labray" target=”_blank”>approx. 8% chance</a> that a Lab
+      Ray zap
+      will change a Neopet's gender. Surely, the Scientist did not plan for this outcome to happen. And while this
+      outcome could easily be reverted, no, it wasn't needed. This
+      would be Tenko's favorite form, and in this form, Tenko is transmasc.
+
+      <br><br>
+      Whenever Tenko revisits this form, their form will look akin to the form they donned while at the Laboratory.
+      Tenko
+      could -- if they wanted -- modify their form even further, but naw. Tenko's
+      pretty happy like this :). They'd rather use their magic to hold onto this form.
+      <br><br>
+
+      "Sustaining this form requires much upkeep from Tenko", Edna noted. Tenko must regularly
+      conjure spells they've learned from Edna on themself to keep their form up. Otherwise, they'll rapidly weaken in
+      this form, and if left unchecked, will collapse and need to be revitalized by Edna. <br><br>
+      In case of emergency, the <a href="https://items.jellyneo.net/item/13515/" target=”_blank”>Rod of Dark Nova</a>
+      Tenko carries around can be used to conjure many spells that Tenko can usually do on their own, including
+      transformation spells. It is a very versatile tool, however it mustn't get into the wrong hands.
+
+    </p>
+    <p id="chibiborilore">
+
+    </p>
+    <a href="#chibiborilore"><button class="button button5"> LORE</button></a>
+    <a href="#chibiboristats"><button class="button button5">STATS</button></a>
+    <p id="chibiboristats">
+      <br>STRENGTH: ★★☆☆☆ (2/5)
+      <br>INTELLIGENCE: ★★★★☆
+      <br>ENDURANCE: ★★☆☆☆
+      <br>CHARISMA: ★★★★★
+      <br><br>
+      Tenko's happiest form, and the form he is most commonly seen in. A well-off, potion-making Mage Bori by day, and a cheeky flirt at night.
+
+
+    </p>
+
+  </div>
+
+  <div class="main"><a href="images/characters/tenko/ref_feral_tenkobori.png" target="_blank">
+      <img src="images/characters/tenko/ref_feral_tenkobori.png"></a>
+    <br>
+    <span class="yellowsmollertext">FERAL FORM BY <a href="https://www.furaffinity.net/user/cirkus/"
+        target=”_blank”>CIRKUS</a>
+      <br>HEIGHT:40cm
+      <br> BUILD: BOWWI
+      <br> BODY: MASC</span>
+    <br><br>
+    <p id="feralborilore">
+
+      This is Tenko's true form, an untransformed feral Bori. <a href="https://bookofages.jellyneo.net/characters/1495/" target="_blank">Lawyerbot</a> requires Tenko to keep this form on Neopets.com! Despite this, everyone knows Tenko best as an anthro.
+      <br><br>
+      He is the most nimble Bori in this form, but he claims to only use this form to be pesky and "fuck around and find out" (as if he already doesn't do that in his other forms). 
+      <br><br>
+     You better watch out for Tenko at 40 cm! He's just as rawr and chompy here as he is when he's at a towering 190 cm!
+     <br><br>
+  
+    Whether he's been bruised up badly, being damned by the   presence of malicious Wraith Neopets, and 
+    
+    
+    prolonged exposure to one can render him stuck as a four-legged friend. This is why Edna the Witch and Tenko's Rod of Dark Nova are his keys to survival on his journey. 
+      <br><br>
+
+    </p>
+    <a href="#feralborilore"><button class="button button5">LORE</button></a>
+
+    <a href="#feralboristats"><button class="button button5"> STATS</button></a>
+    <p id="feralboristats">
+      <br>STRENGTH: ★☆☆☆☆ (1/5)
+      <br>INTELLIGENCE: ★★★☆☆ (3/5)
+      <br>ENDURANCE: ★★★★★ (5/5)
+      <br>CHARISMA: ★★★★☆ (4/5)    </p>
+  </div>
+  </div>
+
+
+  <div class="main">
+    <a href="images/characters/tenko/ref_old_tenkobori.png" target="_blank">
+      <img src="images/characters/tenko/ref_old_tenkobori.png">
+    </a>
+    <span class="yellowsmollertext">FULL ANTHRO FORM BY <a href="https://www.furaffinity.net/user/cirkus/"
+        target=”_blank”>CIRKUS</a>
+      <br> HEIGHT: 190cm
+      <br>BUILD: DIET MUSCLEGUT 
+      <br>BODY: MASC OR TRANSMASC</span>
+    <br><br>
+
+    <p id="fullanthroborilore">
+      Before the Chibi Anthro Project and back when Tenko only had a surface-level understanding of magic, they only
+      knew of one transformation: a form that would make them appear as this tall, musclegut-like Bori.
+
+      <br><br>
+      They're so full of vitality! Tenko likes to work out nonstop and show off more in this form. Well, this comes at
+      the cost of losing INT. And just like their Chibi Anthro Form, they can't sustain this form forever, however they
+      can sustain it using far less magic. This appears to be the case because Tenko is intended to stay in this form
+      while anthropomorphized, and challenging that by being chibi takes more of a toll on Tenko's body. It's okay
+      though, you're a Mage, Tenko! Magic's got your back ★
+
+
+      <br><br>
+
+      <img src="images/characters/tenko/boriday.gif"><br><br> Did you know? The more you say "wow
+      Tenko, you look
+      taller than the last time I saw you!" the more you make them want to revert to their Chibi Anthro Form!?
+      </span>
+      <br>
+
+    </p>
+    <a href="#fullanthroborilore"><button class="button button5"> LORE</button></a>
+    <a href="#fullanthroboristats"><button class="button button5"> STATS</button></a>
+    <p id="fullanthroboristats">
+      <br>STRENGTH: ★★★★☆ (4/5)
+      <br>INTELLIGENCE: ★★☆☆☆ (2/5)
+      <br>ENDURANCE: ★★★★☆ (4/5)
+      <br>CHARISMA: ★★★☆☆ (3/5)
+      <br><br>
+      Big, all-around version of Tenko that combines both Chibi and Feral Tenko's attributes.
+    </p>
+  </div>
+  <div class="main">
+    <a href="images/characters/tenko/preview_tenkobori.jpg" target=”_blank”>
+
+      <img src="images/characters/tenko/preview_tenkobori.jpg"></a>
+    <br>
+    <span class="yellowsmollertext">FURSUIT BY <a href="https://www.dominiquedeleon.com/fursuits"
+        target=”_blank”>DOMINIQUE DE LEON</a><br>
+      Based on Tenko's Full Anthro Form</span><br><br>
+    Tenko is real! His magic doesn't work on Earth, and he's stuck in Full Anthro Form.<br>
+
+    <p id="nosey">
+      <br>
+      Tenko's nose is an interesting case! His snout is somewhat dragon-like in feral form. But in either anthro form,
+      you can draw his nose in two ways:<br><br>
+      - Normal nose: The usual nose is drawn is how you see it in the anthro reference sheets. The nose is pretty much a
+      little "v" shape at the end of the snout.
+      <br><br>
+      - Cartoony nose: Tenko's nose is a darker color, bigger and more bulbous like a canid. Fursuit Tenko and Tenko's
+      3D model uses this nose type.
+    </p>
+
+    </p>
+    <p id="eyez">
+      <br>
+      The eyes are capable of lighting up a very bright red. Tenko activates them sparringly, usually in dark and high
+      energy situations like the nearest rave.
+    </p>
+    <br>
+    <a href="#nosey"><button class="button button5"> NOSE LORE</button></a>
+    <a href="#eyez"><button class="button button5"> EYE LORE</button></a>
+
+  </div>
+
+  <div class="main">
+    <a href="/images/characters/tenko/300MROD_tenkobori.png" target="_blank">
+      <img src="images/characters/tenko/300MROD_tenkobori.png"></a>
+    <br><span class="yellowsmollertext">ART BY <a href="https://twitter.com/WEBPARTEEZ"
+        target=”_blank”>WEBPARTEEZ</a></span>
+    <br><br><a href="https://items.jellyneo.net/item/13515/" target="_blank">ROD OF DARK NOVA</a>
+    <br><span class="redtext">r180 (retired)</span>
+    <br><br>
+    <i>A rod of purest evil, this black artifact will drain life from an opponent, immolate them with flames, and create three Dark Novas.    </i>
+  </div>
+</body>
+
+</html>

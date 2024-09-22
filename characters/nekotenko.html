@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!--title-->
+  <title>NEKOTENKO | NEOPETS.LGBT</title>
+  <!--favicon-->
+  <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+  <!--current site font: Arvo-->
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+  <!-- emoji support-->
+  <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+  <!--zooms page on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<style>
+  /* begin body css */
+  body {
+    font-family: "Arvo", serif;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(103,94,92);
+    height: 100%;
+  }
+
+  .container {
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+
+  }
+
+  /* top css */
+  .top {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 60%;
+    max-width: 600px;
+    background: rgb(226, 226, 226);
+    color: rgb(0, 0, 0);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 10px black;
+    font-weight: bold;
+  }
+
+  /* main css, use this when adding more boxes */
+
+
+  .main {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 60%;
+    max-width: 600px;
+    background: rgb(226, 226, 226);
+    word-wrap: break-word;
+    padding: 10px;
+    box-shadow: 10px 10px black;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .cushion {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 90%;
+    background: rgb(188,177,183);
+    padding: 10px;
+  }
+
+
+  /* begin link colors and decorations */
+
+  a:link,
+  a:visited {
+    color: rgb(111,181,128);
+  }
+
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+
+  /* begin misc fixes */
+  /* prevents images from overflowing */
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .yellowsmollertext {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* life saver: https://stackoverflow.com/a/29307477 */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+
+<script src="jquery-1.7.js" type="text/javascript"></script>
+<script type='text/javascript'>
+  //<![CDATA[
+  $(window).load(function () {
+    var audio;
+    var playlist;
+    var tracks;
+    var current;
+
+    init();
+    function init() {
+      current = 0;
+      audio = $('audio');
+      playlist = $('#playlist');
+      tracks = playlist.find('li a');
+      len = tracks.length - 1;
+      audio[0].volume = 1;
+      audio[0].play();
+      playlist.find('a').click(function (e) {
+        e.preventDefault();
+        link = $(this);
+        current = link.parent().index();
+        run(link, audio[0]);
+      });
+      audio[0].addEventListener('ended', function (e) {
+        current++;
+        if (current == len) {
+          current = 0;
+          link = playlist.find('a')[0];
+        } else {
+          link = playlist.find('a')[current];
+        }
+        run($(link), audio[0]);
+      });
+    }
+    function run(link, player) {
+      player.src = link.attr('href');
+      par = link.parent();
+      par.addClass('active').siblings().removeClass('active');
+      audio[0].load();
+      audio[0].play();
+    }
+  });//]]> 
+
+  $(function () {
+    $(".img-swap").live('click', function () {
+      if ($(this).attr("class") == "img-swap") {
+        this.src = this.src.replace("_sfw", "_nsfw");
+      } else {
+        this.src = this.src.replace("_nsfw", "_sfw");
+      }
+      $(this).toggleClass("on");
+    });
+  });
+
+
+</script>
+
+
+<!-- content starts here -->
+
+<body>
+  <div class="cushion">
+  <div class="container">
+  </div>
+
+
+  <div class="top">
+    <a href="/characters">CHARACTER SELECT</a> >> NEKOTENKO
+  </div>
+
+
+
+  <div class="main"><a href="images/characters/nekotenko/ref_nekotenko.png"><img
+        src="images/characters/nekotenko/ref_nekotenko.png"></a>
+
+    NEKO TENKO/CAT TENKO (FORMERLY TENKO 2017-2021)
+    <br>
+    ANGORA CAT
+    <br>
+    HE/HIM
+  </div>
+
+  <div class="main">
+    <img src="/images/gifs/nyah.gif" title="Nyah!"><img src="/images/gifs/mew.gif" title="Mew!"><img
+      src="/images/gifs/smelly.gif" title="Smelly!">
+  </div>
+
+  <div class="main">
+
+    <audio controls="" id="audio" autoplay="false" tabindex="0"></audio>
+    <hr>
+    <ul id="playlist">
+      <a href="audio/nekotenko/helixspiral.mp3">★ Cornelius - Brazil
+        <br>
+        <a href="/audio/nekotenko/sideprojects.mp3">★ Bomb The Music Industry - Side Projects are Never Successful</a>
+  </div>
+  <div class="main">
+    ★ Original form of Tenko, created in 2017. Lesser used now!
+    <br>
+    ★ Loves <a href="https://toyhou.se/1643586.saya" target="_blank">Saya</a> the most <3 </div>
+</body>
+
+</html>

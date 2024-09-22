@@ -1,0 +1,129 @@
+/* begin body css */
+body {
+    font-family: "Arvo", serif;
+    font-size: 12px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:rgb(34, 34, 34);
+    height: 100%;
+  
+  }
+  
+  /* begin div css */
+  /* makes the boxes do the thing*/
+  
+
+  /* top css */
+  .top {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 600px;
+    background: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px black;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  /* main css, use this when adding more boxes */
+ 
+
+  .OCS {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    background: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px black;    
+  }
+
+  .cushion {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    background: rgb(255, 211, 34);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;    
+  }
+
+  /* bottom css */
+  .bottom {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    background: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px black;
+  } 
+  
+  
+  /* begin link colors and decorations */
+  
+  a:link,
+  a:visited {
+    color: rgb(255, 255, 0);
+  }
+  
+  /* disabled, reactivate to allow unique colored links on .bottom 
+  .main a:link,
+  .main a:visited {
+    color: rgb(255, 0, 76);
+  }
+  */
+  
+  /* disabled, reactivate to allow unique colored links on .bottom
+  bottom a:link,
+  .bottom a:visited {
+    color: rgb(255, 0, 76);
+  } */
+  
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+  
+  /*inactive, remove comment to reactivate
+    .main a:hover {
+      color: #e5e5e5;
+    }*/
+  
+  
+  /*inactive, remove comment to reactivate
+    .bottom a:hover {
+      color: #696969
+    }*/
+  
+  /* begin misc fixes */
+  /* prevents images from overflowing */
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }

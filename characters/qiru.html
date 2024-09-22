@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!--title-->
+    <title>QIRU | NEOPETS.LGBT</title>
+    <!--favicon-->
+    <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+    <!--current site font: Arvo-->
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+    <!-- emoji support-->
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+    <!--zooms page on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+</head>
+
+<style>
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    font-family: "Arvo", serif;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(255, 199, 134);
+    height: 100%;
+
+  }
+
+  .top {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 300px;
+    background: rgb(228, 228, 228);
+    color: rgb(0, 0, 0);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 10px black;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .main {
+  position: relative;
+  top: -50%;
+  margin: 20px auto;
+  width: 60%;
+    max-width: 600px;
+  background: rgb(241, 240, 240);
+  color: rgb(0, 0, 0);
+  word-wrap: break-word;
+  padding: 10px;
+  text-align: left;
+  box-shadow: 10px 10px black;
+  font-weight: bold;
+}
+.mainy {
+  position: relative;
+  top: -50%;
+  margin: 20px auto;
+  width: 60%;
+    max-width: 600px;
+  background: rgb(241, 240, 240);
+  color: rgb(0, 0, 0);
+  word-wrap: break-word;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 10px 10px black;
+  font-weight: bold;
+}
+
+
+a:link,
+        a:visited {
+            color: rgb(134, 52, 130);
+            text-decoration: none;
+        }
+
+        a:hover {
+  text-decoration: underline;
+}
+
+
+        img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.feck {
+  background-color: rgb(0, 0, 0)
+}
+
+    </style>
+    <script src="jquery-1.7.js" type="text/javascript"></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+      $(window).load(function () {
+        var audio;
+        var playlist;
+        var tracks;
+        var current;
+    
+        init();
+        function init() {
+          current = 0;
+          audio = $('audio');
+          playlist = $('#playlist');
+          tracks = playlist.find('li a');
+          len = tracks.length - 1;
+          audio[0].volume = 1;
+          audio[0].play();
+          playlist.find('a').click(function (e) {
+            e.preventDefault();
+            link = $(this);
+            current = link.parent().index();
+            run(link, audio[0]);
+          });
+          audio[0].addEventListener('ended', function (e) {
+            current++;
+            if (current == len) {
+              current = 0;
+              link = playlist.find('a')[0];
+            } else {
+              link = playlist.find('a')[current];
+            }
+            run($(link), audio[0]);
+          });
+        }
+        function run(link, player) {
+          player.src = link.attr('href');
+          par = link.parent();
+          par.addClass('active').siblings().removeClass('active');
+          audio[0].load();
+          audio[0].play();
+        }
+      });//]]> 
+    
+      $(function () {
+        $(".img-swap").live('click', function () {
+          if ($(this).attr("class") == "img-swap") {
+            this.src = this.src.replace("_sfw", "_nsfw");
+          } else {
+            this.src = this.src.replace("_nsfw", "_sfw");
+          }
+          $(this).toggleClass("on");
+        });
+      });
+    
+    
+    </script>
+<!-- content starts here -->
+
+<body>
+
+        <div class="top">
+   <span class="bigtext"><a href="characters">CHARACTER SELECT</a> >> QIRU</span>
+   </div>
+
+
+       
+   </div>
+   <div class="mainy">  
+    <img src="images/characters/qiru/qiru1.jpg">
+<br>
+★ DESERT LUTARI
+<br>
+HE/HIM 
+<br>
+★ <a href="https://impress-2020.openneo.net/outfits/2148241" target=”_blank”>OPENNEO</a> | <a href="http://www.neopets.com/petlookup.phtml?pet=Qirunu" target=”_blank”>PETPAGE</a>
+<br>
+★ ART BY <a href="https://twitter.com/WEBPARTEEZ"target="_blank">WEBPARTEEZ </a>
+    </div>
+
+<div class="mainy">  
+  <img src="images/gifs/lutari.gif"title="Lutari!"><img src="images/gifs/helpful.gif"title="Helpful!"><img src="images/gifs/usuki.gif"title="Usukicon Fanatic!"><img src="images/gifs/whee.gif"title="Whee!">
+  </div>
+
+  <div class="mainy">
+  
+    <audio controls="" id="audio" autoplay="false" tabindex="0"></audio>
+    <hr>
+    <ul id="playlist">
+      <a href="audio/qiru/SR388.mp3">★ Metroid II - Surface Of SR388</a>
+      <br>
+      <a href="audio/qiru/comeon.mp3">★ Mario & Luigi: Superstar Saga + Bowser's Minions - Come On! </a>
+      <br>
+      <a href="audio/general/connected.mp3">★ Tetris Effect - Connected</a>
+      </div>
+    </div>
+
+    <div class="main"> 
+      ★ Qiru is a cute nerd and huge Nintendo geek! He dates his partner Sosa who he met in a funny situation after their college orientation. 
+      <br><br>
+      ★ Although he and Sosa have very different hobbies, they both encourage each other to do their best. Video game battle music plays in Qiru's head whenever they cheer and spectate Sosa's fights, and Qiru is an artist who draws art for Sosa on their 3DS and Wacom when they are at home cuddling together :3.
+    </div>
+
+ <!---  gay gay super gay with <a href="/sosa">Sosa</a>
+<br><br>- ambivert -- shy but approached sosa first 
+<br> <br>- owner of every nintendo handheld from gba to 3ds, master at MKDS and pictochatting on the school bus as a kid
+<br> <br>- wasn't really sure what to do after graduating high school, just liked to party when given the chance
+<br> <br>
+- like sosa, went to the meridell recruiting office looking for a change in life, but when they walked out of the office, the change they got was from them being together :3
+<br> <br> - unemployed, but in college with the support of sosa by his side. loves flipnote and wants to be an animator in the future
+ -->
+
+</div>
+   </body>
