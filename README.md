@@ -3,7 +3,7 @@
 
 | Availability                                                                                                         | Latest Update |                             Rawrtime
 |-----------------------------------------------------------------------------------------------------------------------|--------------------------|--------------------------------|
-| [![neopets.lgbt](https://img.shields.io/website?url=https%3A%2F%2Fneopets.lgbt%2F)](https://neopets.lgbt/) | [![github.com](https://img.shields.io/github/last-commit/tenkowski/NEOPETS.LGBT)](https://github.com/tenkowski/NEOPETS.LGBT/commits/master/) | [![uptimerobot.com](https://img.shields.io/uptimerobot/ratio/m797719428-848e3580971a2ca15d2d2b1b)](https://dashboard.uptimerobot.com/monitors/797719428)
+| [![neopets.lgbt](https://img.shields.io/website?url=https%3A%2F%2Fneopets.lgbt%2F)](https://neopets.lgbt/) | [![github.com](https://img.shields.io/github/last-commit/tenkowski/NEOPETS.LGBT)](https://github.com/tenkowski/NEOPETS.LGBT/commits/master/) | [![uptimerobot.com](https://img.shields.io/uptimerobot/ratio/m797719428-848e3580971a2ca15d2d2b1b)](https://stats.uptimerobot.com/sLBUBErOtW/797719428)
 
 
 ---
