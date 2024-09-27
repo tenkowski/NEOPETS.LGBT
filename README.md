@@ -7,11 +7,12 @@
 
 
 ---
-This was <a href="https://tenkowski.neocities.org/">originally a Neocities project</a> and it shows. Tenko likes it that way. Tenko also likes making <a href="https://neopets.lgbt/neopets">character profiles</a> for themself and his companions. Tenko doesn't like the file restrictions of Neocities and the limitations of Toyhouse! Tenko is <b><i>not</b></i> small and wants to do big things. Tenko makes <b>NEOPETS.LGBT!</b> It's character profiles first, then whatever else it wants to be.
+This was <a href="https://tenkowski.neocities.org/">originally a Neocities project</a> and it shows. Tenko likes it that way. Tenko also likes making <a href="https://neopets.lgbt/neopets">character profiles</a> for themself and his companions. Tenko doesn't like the file restrictions of Neocities and the limitations of Toyhou.se! Tenko is <b><i>not</b></i> small and wants to do big things. Tenko makes <b>NEOPETS.LGBT!</b> It's character profiles first, then whatever else it wants to be.
 <br>
 ### BENEFITS FOR YOU:
-  - Use this as a changelog! See what's changed in the awesome sauce parts of the site.
-  - Create a "new issue" in the Issues tab to bring something up regarding the site. (or message Tenko xd)
+  - There are two branches, develop and master:
+    - You can see Tenko working on pages in the develop branch
+    - You can see what's live on the site in the master branch
   - If the site is ever down, you can always look here for clues.
 ### BENEFITS FOR ME (AND YOU):
 - As Tenko learns more about what they can do with Git, this should hopefully speed up, simplify, and futureproof how the project is maintained as it continues to change and grow. 
