@@ -16,8 +16,8 @@ However, in 2020 Tenko decided to make his own site for the following reasons:
 - A memorable (and relatable) URL to view Tenko's Neopets immediately on any computer
 ### BENEFITS FOR YOU:
   - There are two branches, develop and master, and also releases:
-    - The develop branch is unreleased stuff being worked on by Tenko
-    - The master branch should be a copy of what the site looks like right now
+    - The develop branch is the latest stuff being worked on, may or may not be live on the site
+    - The master branch ideally should be a copy of what the site looks like right now
       - Not every master branch is a release, read below
     - Releases are milestones! A update worthy of patch notes you should look at!
       - Generally these are huge updates to a character page or more, the collage, etc.
