@@ -7,12 +7,20 @@
 
 
 ---
-This was <a href="https://tenkowski.neocities.org/">originally a Neocities project</a> and it shows. Tenko likes it that way. Tenko also likes making <a href="https://neopets.lgbt/neopets">character profiles</a> for themself and his companions. Tenko doesn't like the file restrictions of Neocities and the limitations of Toyhou.se! Tenko is <b><i>not</b></i> small and wants to do big things. Tenko makes <b>NEOPETS.LGBT!</b> It's character profiles first, then whatever else it wants to be.
-<br>
+To describe what this is in a nutshell: It's the silliness of Neocities, about Tenko's Neopets, with character profiles like Toyhou.se<br>
+
+However, in 2020 Tenko decided to make his own site for the following reasons:
+- Neocities is great for most people, but you can hit the limit of what it can do versus what you want it to do. Tenko hit it. 
+- Neopets is still technically a kids site, and Tenko doesn't want to risk tripping the kiddie filter
+- Toyhou.se is not suitable for what Tenko needs, and Tenko doesn't really like using it either
+- A memorable (and relatable) URL to view Tenko's Neopets immediately on any computer
 ### BENEFITS FOR YOU:
-  - There are two branches, develop and master:
-    - You can see Tenko working on pages in the develop branch
-    - You can see what's live on the site in the master branch
+  - There are two branches, develop and master, and also releases:
+    - The develop branch is unreleased stuff being worked on by Tenko
+    - The master branch should be a copy of what the site looks like right now
+      - Not every master branch is a release, read below
+    - Releases are milestones! A update worthy of patch notes you should look at!
+      - Generally these are huge updates to a character page or more, the collage, etc.
   - If the site is ever down, you can always look here for clues.
 ### BENEFITS FOR ME (AND YOU):
 - As Tenko learns more about what they can do with Git, this should hopefully speed up, simplify, and futureproof how the project is maintained as it continues to change and grow. 
