@@ -16,14 +16,22 @@
 <!--page colors and whatnot-->
 <style>
     body {
-        background-color: rgb(215, 215, 215);
+        background-color: rgb(0, 21, 91);
 
     }
 
     a:link,
     a:visited {
         text-decoration: none;
-        color: rgb(189, 21, 57);
+        color: #0c2885;
+    }
+
+    .closebox:link {
+        color: #cf0000;
+    }
+
+    .closebox:visited {
+        color: #cf0000;
     }
 
     .bigtext {
@@ -40,18 +48,7 @@
 
     /*the good stuff*/
 
-    .cushion {
-        position: relative;
-        top: -50%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 100%;
-        background: rgb(0, 21, 91);
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
+
 
     body {
         font-family: "Arvo", serif;
@@ -94,7 +91,7 @@
         text-align: left;
     }
 
-    #notice1 {
+    /*#notice1 {
         position: relative;
         top: -50%;
         margin: 20px auto;
@@ -106,7 +103,7 @@
         padding: 5px;
         box-shadow: 10px 10px black;
         text-align: left;
-    }
+    } */
 
     /* top  */
     .top {
@@ -134,16 +131,76 @@
         height: 150px;
     }
 
-.favicon {
-width: 18px;
-height: 18px;
-}
+    .favicon {
+        width: 18px;
+        height: 18px;
+    }
 
     .clickable {
         cursor: pointer;
         /* Change cursor to indicate clickability */
         text-decoration: underline;
         /* Add underline for visual cue */
+    }
+
+    .button5 {
+        background-color: #d1d1d1;
+        color: #00155B;
+        font-style: italic;
+    }
+
+    .button6 {
+        background-color: #d1d1d1;
+        color: #ff0000;
+        font-style: italic;
+    }
+
+
+    .button {
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        /* Ensure the button is treated as a block element */
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: "Arvo", serif;
+        font-weight: bold;
+        width: auto;
+        /* Adjust width as needed */
+    }
+
+    #how {
+        display: none;
+    }
+
+    #how:target {
+        display: block;
+    }
+
+    #what {
+        display: none;
+    }
+
+    #what:target {
+        display: block;
+    }
+
+    #credits {
+        display: none;
+    }
+
+    #credits:target {
+        display: block;
+    }
+
+    #nonneopet {
+        display: none;
+    }
+
+    #nonneopet:target {
+        display: block;
     }
 </style>
 
@@ -171,63 +228,100 @@ height: 18px;
 <!-- content starts here -->
 
 <body>
-    <div class="cushion">
-        <div class="top"><a href="/">HOME</a> > NEOPETS</div>
+    <div class="top"><a href="/">HOME</a> > NEOPETS</div>
 
 
-        <!--<div id="notice1">
+    <!--<div id="notice1">
         ⚠️ September 2024: Character pages are slowly being updated or added! Pages that are the most up to date say NEOPETS instead of CHARACTERS on the top bar. Thanks for waitin. <span class="clickable" onclick="myFunction()">[close this message]</span> -->
-        <div class="main">
-            <div class="container">
-                <a href="/tenko"><img src="/images/portraits/portrait_tenko.png"></a>
-                <a href="/caci"><img src="images/portraits/portrait_caciwagua.png"></a>
-                <a href="/ranka"><img src="images/portraits/portrait_rankamaru.png"></a>
-                <a href="/vim"><img src="/images/portraits/portrait_vim.png"></a>
-                <a href="/sosa"><img src="/images/portraits/portrait_sosa.png"></a>
-                <a href="/qiru"><img src="images/portraits/portrait_qiru.png"></a>
-                <a href="/lasak"><img src="images/portraits/portrait_lasaklang.png"></a>
-                <a href="roku"><img src="images/portraits/portrait_roku.png"></a>
-                <a href="sphoryx"><img src="images/portraits/portrait_sphoryx.png"></a>
-                <!--<a href="/sirubiru"><img src="images/portraits/portrait_sirubiru.png"style="width:300px; height:150px;">
+    <div class="main">
+        <div class="container">
+            <a href="/tenko"><img src="/images/portraits/portrait_tenko.png"></a>
+            <a href="/caci"><img src="images/portraits/portrait_caciwagua.png"></a>
+            <a href="/ranka"><img src="images/portraits/portrait_rankamaru.png"></a>
+            <a href="/vim"><img src="/images/portraits/portrait_vim.png"></a>
+            <a href="/sosa"><img src="/images/portraits/portrait_sosa.png"></a>
+            <a href="/qiru"><img src="images/portraits/portrait_qiru.png"></a>
+            <a href="/lasak"><img src="images/portraits/portrait_lasaklang.png"></a>
+            <a href="roku"><img src="images/portraits/portrait_roku.png"></a>
+            <a href="sphoryx"><img src="images/portraits/portrait_sphoryx.png"></a>
+            <!--<a href="/sirubiru"><img src="images/portraits/portrait_sirubiru.png"style="width:300px; height:150px;">
             <a href="https://www.neopets.com/userlookup.phtml?user=lol_99"><img src="images/portraits/portrait_andmore.png"></a>-->
 
-            </div>
         </div>
-        <div class="main">
-            <div class="container">
-                <center><span class=bigtext>TENKO, BUT NOT A NEOPET</span></center>
+    </div>
 
-                <a href="/roninko"><img src="images/portraits/portrait_roninko.png"></a>
-                <a href="/nekotenko"><img src="/images/portraits/portrait_nekotenko.png"></a>
-            </div>
-        </div>
-        <div class="mainy">
-            <center><span class=bigtext>HOW TO NAVIGATE</span></center>
+    </div>
+    <div class="mainy">
+        <a href="#what"><button class="button button5"> WHAT</button></a>
+        <a href="#how"><button class="button button5"> HOW</button></a>
+        <a href="#nonneopet"><button class="button button5"> SHOW NON-NEOPETS</button></a>
+        <a href="#credits"><button class="button button5"> CREDITS</button></a>
+        <p id="what">
+            <span class="bigtext">THIS IS TENKO</span>
+
+            <video controls width="350" height="200" muted>
+                <source src="/images/characters/tenko/tenkorave.webm" type="video/webm" />
+            </video>
+            <br><br>and they cherish Neopets greatly
+            <br> Especially these Neopets
+            <br> Some they consider their family
+            <br> Others, they bully and get bullied by
+            <br> Each Neopet here has a bit of story behind it
+            <br> But it's nothing to think too much about
+            <br> For Neopets create something much more when put together
+
+            <br>
+            <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
+        </p>
+        <p id="how">
+            <span class="bigtext">HOW TO NAVIGATE</span>
+            <br>
             Look for these things in each page:<br>
-            <hr>
-            <u>References</u>: Glimpse at what they look like
-            <hr>
-            <u>Avatars</u>: Their personality, described in Neoboard avatars
-            <hr>
-            <u>Playlist</u>: A song or two or more relatable to them
-            <hr>
-            <u>Lore</u>: Stories and more to learn about them
-            <hr>
-            <u>Art</u>: Extra art goes near the bottom of pages
-            <hr>
-            <u>Art Credit</u>: Artists are always credited here!
-            <hr>
-            <img src="/images/other/faviconV2.png" class="favicon">: New! See the Neopets star next to a link? That means it'll take you to a page on Neopets.com, sign-in likely required.
-        </div>
-        <div class="mainy">
-            <i> all characters painted, zapped, mutated, reincarnated, transmogrified, divergent evolutioned, etc. by
-                tenko</i>
-            <hr>
-            row 1 and 3: art by <a href="https://twitter.com/ferwanwan">ferwanwan</a> <br>
-            row 2: art by <a href="https://twitter.com/WEBPARTEEZ">webparteez</a> <br>
-            roninko art by <a href="https://twitter.com/felitech_">felitech</a><br>
-            nekotenko art by <a href="https://twitter.com/muttvore">muttvore</a><br>
-        </div>
+
+            ※ <u>References</u>: Glimpse at what they look like
+            <br>
+            ※ <u>Avatars</u>: Their personality, described in Neoboard avatars
+            <br>
+            ※ <u>Playlist</u>: A song or two or more relatable to them
+            <br>
+            ※ <u>Lore</u>: Stories and more to learn about them
+            <br>
+            ※ <u>Art</u>: Extra art goes near the bottom of pages
+            <br>
+            ※<u>Art Credit</u>: Artists are always credited here!
+            <br>
+            ※ <img src="/images/other/faviconV2.png" class="favicon">: New! See the Neopets star next to a link? That
+            means it'll take you to a page on Neopets.com (you likely need to be signed in)
+            <br><br>
+            If you 404, come back soon, Tenkowski's working on something...!
+            <br>
+            <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
+        </p>
+        <p id="nonneopet">
+            <span class=bigtext>TENKO, BUT NOT A NEOPET</span>
+            <BR>
+            <a href="/roninko"><img src="images/portraits/portrait_roninko.png"></a>
+            <a href="/nekotenko"><img src="/images/portraits/portrait_nekotenko.png"></a>
+            <br>
+            <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
+        </p>
+        <p id="credits">
+            <span class="bigtext">ARTISTS AND ATTRIBUTION</span>
+            <br>
+            ※Row 1 and 3: Art by <a href="https://twitter.com/ferwanwan">Ferwanwan</a> <br>
+            ※Row 2: Art by <a href="https://twitter.com/WEBPARTEEZ">Webparteez</a> <br>
+            ※Roninko art by <a href="https://twitter.com/felitech_">Felitech</a><br>
+            ※Nekotenko art by <a href="https://twitter.com/muttvore">Muttvore</a><br><br>
+            ※ All characters painted, zapped, mutated, reincarnated, transmogrified, divergent evolutioned, etc.by
+            Tenkowski.
+            <br><br> ※ SPECIAL THANKS: <a href="https://www.clairehummel.com/">Claire Hummel</a>, for her contributions
+            to Neopets art and design, including making the Darigan Bori!
+
+            <br>
+            <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
+        </p>
+    </div>
+
 </body>
 
 </html>
