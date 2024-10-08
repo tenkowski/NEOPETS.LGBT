@@ -7,8 +7,8 @@
 
 
 ---
-<b>NEOPETS.LGBT</b> is Tenkowski's blend of the silliness of Neocities with the character profile sharing aspect of Toyhou.se.<br>
-Even though it's static pages, putting the project on here helps Tenkowski keep track of how the pages changes over time! <br>
+<b>NEOPETS.LGBT</b> is a blend of Neocities silliness with the character profile making aspect of Toyhou.se.<br>
+This repo greatly helps Tenkowski keep track of changes to the site! <br>
 <h3> NEOPETS.LGBT on GitHub is helpful for you too.</h3>
 Making changelogs HAH. Bori Bori! Just look at all the code changing around here! <br>
 Come back here if you think something is wrong with the site or wanna peep the code! 
