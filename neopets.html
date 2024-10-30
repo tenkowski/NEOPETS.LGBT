@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
     <!-- emoji support-->
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
-    <!--zooms page on mobile devices-->
-    <meta name="viewport" content="width=device-width, initial-scale=0.7" />
+    <!--zooms page on mobile devices
+    <meta name="viewport" content="width=device-width, initial-scale=0.7" />-->
 </head>
 <!--page colors and whatnot-->
 <style>
@@ -106,7 +106,6 @@
         text-align: left;
     } */
 
-    /* top  */
     .top {
         position: relative;
         top: -50%;
@@ -196,12 +195,20 @@
         display: block;
     }
 
-    #nonneopet {
+    #extras {
         display: none;
     }
 
-    #nonneopet:target {
+    #extras:target {
         display: block;
+    }
+
+    .image-cut {
+        width: 231px; 
+  height: 150px;
+  object-fit: cover;
+  object-position: left;
+  overflow: hidden;
     }
 </style>
 
@@ -253,7 +260,7 @@
     <div class="mainy">
         <a href="#what"><button class="button button5"> STORY </button></a>
         <a href="#how"><button class="button button5"> NAV </button></a>
-        <a href="#nonneopet"><button class="button button5"> EXTRAS </button></a>
+        <a href="#extras"><button class="button button5"> EXTRAS </button></a>
         <a href="#credits"><button class="button button5"> CREDITS</button></a>
         <p id="what">
             <span class="bigtext">THIS IS TENKO</span>
@@ -261,11 +268,11 @@
             <video controls width="350" height="200" muted>
                 <source src="/images/characters/tenko/tenkorave.webm" type="video/webm" />
             </video>
-      
+
             <br> and tenko loves everyone here!
             <br> more than anything across Neopia!
             <br> more than a Fountain Faerie Quest!
-            <br> more than Rod of Dark Nova! 
+            <br> more than Rod of Dark Nova!
             <br><br> this is his collective. he wouldn't trade it for anything in the world.
             <br> click someone, and see what makes them a part of tenko's party.
             <br> this site is static, but the lore of each party member is very dynamic.
@@ -295,7 +302,7 @@
             <br>
             <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
         </p>
-        <p id="nonneopet">
+        <p id="extras">
             <span class=bigtext>TENKO, BUT NOT A NEOPET</span>
             <BR>
             <a href="/roninko"><img src="images/portraits/portrait_roninko.png"></a>
@@ -314,7 +321,7 @@
 
             <span class=bigtext>EXTRA NEOPETS</span>
             <br>
-            <a href="/sirubiru"><img src="images/portraits/portrait_sirubiru.png" style="width:300px; height:150px;"><a
+            <a href="/sirubiru"><img src="images/portraits/portrait_sirubiru.png" class="image-cut"> <a
                     href="/machu"><img src="images/portraits/portrait_machu.png"></a>
                 <br>
                 <i>INACTIVE OR FORMER MEMBERS OF TENKO'S PARTY</i>
