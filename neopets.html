@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://unpkg.com/mermaid@8.14.0/dist/mermaid.min.js"></script>
     <meta charset="UTF-8" />
     <!--title-->
     <title>NEOPETS | NEOPETS.LGBT</title>
@@ -203,12 +204,25 @@
         display: block;
     }
 
+    #timeline {
+        display: none;
+    }
+
+    #timeline:target {
+        display: block;
+    }
+
     .image-cut {
         width: 231px;
         height: 150px;
         object-fit: cover;
         object-position: left;
         overflow: hidden;
+    }
+
+    .image-svg {
+        width: 100%;
+        height: 100%;
     }
 </style>
 
@@ -232,6 +246,13 @@
         }
     };
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        mermaid.initialize({ startOnLoad: true });
+    });
+</script>
+
 
 <!-- content starts here -->
 
@@ -257,18 +278,21 @@
     </div>
 
     </div>
-    <div class="mainy">
-        <a href="#what"><button class="button button5"> ABOUT THE GUILD </button></a>
+    <div class="main">
+        <a href="#what"><button class="button button5"> ABOUT </button></a>
         <!--<a href="#how"><button class="button button5"> GUIDE </button></a>-->
-        <a href="#extras"><button class="button button5"> EXTRA ANIMALS </button></a>
+        <a href="#extras"><button class="button button5"> EXTRAS </button></a>
         <a href="#credits"><button class="button button5"> CREDITS</button></a>
+        <a href="#timeline"><button class="button button5"> TIMELINE </button></a>
+
         <p id="what">
             <span class="bigtext">THIS IS TENKO</span>
 
             <video controls width="350" height="200" muted>
                 <source src="/images/characters/tenko/tenkorave.webm" type="video/webm" />
             </video>
-            <br><a href="http://neopets.lgbt/images/characters/tenko/tenkorave.webm">[Direct link to clip above, if it doesn't load]</a>
+            <br><a href="http://neopets.lgbt/images/characters/tenko/tenkorave.webm">[Direct link to clip above, if it
+                doesn't load]</a>
 
             <br><br> ...and everyone here is a member of Tenko's guild.
             <br> They mean the most to him. This is Team Daridillo.
@@ -334,13 +358,7 @@
                 <br>
                 <a href="https://www.neopets.com/userlookup.phtml?user=lol_99"><img
                         src="images/portraits/portrait_andmore.png"></a>
-                       
-<br>
-We have more members of Team Daridillo! Jico, QJ, QM, Yura, Taji...
-<br>
-They will eventually be added to the main box of this page!
-<br> For now, please check them out above! 
-<br> (Note, not every Neopet on that userpage is related to the guild)
+
                 <br>
                 <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
         </p>
@@ -357,6 +375,9 @@ They will eventually be added to the main box of this page!
             <br>
             》 Machu art by <a href="https://heartlurch.carrd.co/">heartlurch</a>
             <br>
+            》 Foil effect on some portraits by <a
+                href="https://www.deviantart.com/icycatelf/art/Overlapping-Type-Foil-349093246">icycatelf</a>
+            <br>
             》 All characters painted, zapped, mutated, transmogrified, divergent evolutioned, etc. by
             Tenkowski.<!-- 
             <br>
@@ -372,8 +393,12 @@ They will eventually be added to the main box of this page!
             <br>
             <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
         </p>
+        <p id="timeline">
+            <img src="/images/other/flowchat.svg" class="image-svg">
+            <br>
+            <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
+        </p>
     </div>
-
 </body>
 
 </html>
