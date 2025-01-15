@@ -7,6 +7,6 @@
 
 1) If you are interested in the development and status of NEOPETS.LGBT, this page is for you
 
-2) If you 404, the page you tried to visit is probably in development. pages get developed here before they go live!
+2) If you 404, keep in mind pages get developed here before they go live!
    
 3) Bori Bori Bori Bori Bori Bori Bori Bori Bori Bori
