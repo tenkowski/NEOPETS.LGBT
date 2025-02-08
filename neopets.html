@@ -40,6 +40,11 @@
         color: rgb(0, 0, 0);
         font-size: 20px;
     }
+
+    .bigishtext {
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+    }
 </style>
 
 <style>
@@ -107,6 +112,10 @@
         text-align: left;
     } */
 
+    .goleft {
+        text-align: left;
+    }
+
     .top {
         position: relative;
         top: -50%;
@@ -145,17 +154,16 @@
     }
 
     .button5 {
-        background-color: #e4e4e4;
+        background-color: #ffffff;
         color: rgb(0, 21, 91);
         font-style: bold;
     }
 
     .button6 {
-        background-color: #e4e4e4;
+        background-color: #ffffff;
         color: #ff0000;
         font-style: bold;
     }
-
 
     .button {
         padding: 5px 10px;
@@ -169,6 +177,21 @@
         font-family: "Arvo", serif;
         font-weight: bold;
         width: auto;
+        /* Adjust width as needed */
+    }
+
+    .buttony {
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        /* Ensure the button is treated as a block element */
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: "Arvo", serif;
+        font-weight: bold;
+        width: 100%;
         /* Adjust width as needed */
     }
 
@@ -209,6 +232,15 @@
     }
 
     #timeline:target {
+        display: block;
+    }
+
+    #expand {
+        display: none;
+        text-align: left;
+    }
+
+    #expand:target {
         display: block;
     }
 
@@ -273,15 +305,52 @@
             <a href="/lasak"><img src="images/portraits/portrait_lasaklang.png"></a>
             <a href="/roku"><img src="images/portraits/portrait_roku.png"></a>
             <a href="/sphoryx"><img src="images/portraits/portrait_sphoryx.png"></a>
+            <a href="/jico"><img src="images/portraits/portrait_jico.png"></a>
+            <a href="/taji"><img src="images/portraits/portrait_taji.png"></a>
+            <a href="/heige"><img src="images/portraits/portrait_heige.png"></a>
+            <a href="/qm"><img src="images/portraits/portrait_quma.png"></a>
+            <a href="/yura"><img src="images/portraits/portrait_yura.png"></a>
+            <a href="/turu"><img src="images/portraits/portrait_turu.png"></a>
+            <a href="#expand"><button class="buttony button5"> 🔽 EXPAND 🔽 </button></a>
+            <p id="expand">
+ℹ️ Showing alt. versions of Tenko and additional Neopets.
+<br>
+                <a href="/roninko"><img src="images/portraits/portrait_roninko.png"></a>
+                <a href="/猫天口"><img src="/images/portraits/portrait_nekotenko.png"></a>
+                <a href="/caruso"><img src="/images/portraits/portrait_caruso.png"></a>
+                <br>
+                <!--
+            <br>
+            》 Tenko is reborn as a heavily mutated mammal left to fend for itself in a post-post apocalypic world and is
+            called Roninko.
+            <br>
+            》 Tenko had they not isekai'd into Neopia in 2020, that's Neko Tenko.
+            -->
+                <a href="/sirubiru"><img src="images/portraits/portrait_sirubiru.png" class="image-cut"> <a
+                        href="/machu"><img src="images/portraits/portrait_machu.png"></a>
+                    <br>
+                    <!--condensing this page. will move this info elsewhere<br>
+                》 Veirs and Senja are still good friends with Tenko and sometimes still work with them, but the two are
+                often off doing their own research.
+                <br>
+                》Machu departed the party in 2024. <a href="sphoryx">Sphoryx</a> replaces them.
+                <br>
+                ※ It's not clear if the Neopets in this section will become active again, but don't expect the most up
+                to date art and info here.-->
+                    <a href="https://www.neopets.com/userlookup.phtml?user=lol_99"><img
+                            src="images/portraits/portrait_andmore.png"></a>
+                    <br>
+                    <a href="#"><button class="buttony button6">CLOSE THIS BOX</button></a>
+
+            </p>
 
         </div>
     </div>
 
     </div>
-    <div class="main">
+    <div class="mainy">
         <a href="#what"><button class="button button5"> ABOUT </button></a>
         <!--<a href="#how"><button class="button button5"> GUIDE </button></a>-->
-        <a href="#extras"><button class="button button5"> EXTRAS </button></a>
         <a href="#credits"><button class="button button5"> CREDITS</button></a>
         <a href="#timeline"><button class="button button5"> TIMELINE </button></a>
 
@@ -294,7 +363,7 @@
             <br><a href="http://neopets.lgbt/images/characters/tenko/tenkorave.webm">[Direct link to clip above, if it
                 doesn't load]</a>
 
-            <br><br> ...and everyone here is a member of Tenko's guild.
+            <br><br> ...and almost everyone here is part of Tenko's guild.
             <br> They mean the most to him. This is Team Daridillo.
             <br> Making coin and gaining fame is secondary to them.
             <br> <br> They travel all across Neopia to take on jobs as a team
@@ -327,59 +396,27 @@
             <br>
             <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
         </p>
-        <p id="extras">
-            <span class=bigtext>TENKO, BUT NOT A NEOPET:</span>
-            <BR>
-            <a href="/roninko"><img src="images/portraits/portrait_roninko.png"></a>
-            <a href="/猫天口"><img src="/images/portraits/portrait_nekotenko.png"></a>
-            <a href="/caruso"><img src="/images/portraits/portrait_caruso.png"></a>
-            <br>
-            <!--
-            <br>
-            》 Tenko is reborn as a heavily mutated mammal left to fend for itself in a post-post apocalypic world and is
-            called Roninko.
-            <br>
-            》 Tenko had they not isekai'd into Neopia in 2020, that's Neko Tenko.
-            -->
-            <span class=bigtext>INACTIVE/FORMER PARTY MEMBERS:</span>
-            <br>
-            <a href="/sirubiru"><img src="images/portraits/portrait_sirubiru.png" class="image-cut"> <a
-                    href="/machu"><img src="images/portraits/portrait_machu.png"></a>
-                <br>
-                <!--condensing this page. will move this info elsewhere<br>
-                》 Veirs and Senja are still good friends with Tenko and sometimes still work with them, but the two are
-                often off doing their own research.
-                <br>
-                》Machu departed the party in 2024. <a href="sphoryx">Sphoryx</a> replaces them.
-                <br>
-                ※ It's not clear if the Neopets in this section will become active again, but don't expect the most up
-                to date art and info here.-->
-                <span class=bigtext>VIEW EVERYONE ON NEOPETS.COM:</span>
-                <br>
-                <a href="https://www.neopets.com/userlookup.phtml?user=lol_99"><img
-                        src="images/portraits/portrait_andmore.png"></a>
-
-                <br>
-                <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
-        </p>
         <p id="credits">
-            <span class="bigtext">ARTISTS AND ATTRIBUTION</span>
+            <u>MAIN ART FOR THE GUILD PROVIDED BY:</u>
             <br>
-            》 Row 1 and 3 art by <a href="https://twitter.com/ferwanwan">ferwanwan</a> <br>
-            》 Row 2 art by <a href="https://twitter.com/WEBPARTEEZ">WEBPARTEEZ</a> <br>
-            》 Roninko art by <a href="https://twitter.com/felitech_">felitech</a>
+            》Row 1, 3, 4, 5 art by <a href="https://twitter.com/ferwanwan">ferwanwan</a> <br>
+            》Row 2 art by <a href="https://twitter.com/WEBPARTEEZ">webparteez</a> <br>
+            ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ <br>
+            <u>ADDITIONAL ARTISTS:</u>
+            <br>
+            》Roninko art by <a href="https://twitter.com/felitech_">felitech</a>
             <br>》 猫天口 (Cat Tenko) art by <a href="https://twitter.com/muttvore">chammuco</a>
             <br>》Caruso art by <a href="https://www.aisuart.com/about">aisuart</a>
             <br>
-            》 Veirsiru art by <a href="https://twitter.com/kappanuki">kappanuki</a>
+            》Veirsiru art by <a href="https://twitter.com/kappanuki">kappanuki</a>
             <br>
-            》 Machu art by <a href="https://heartlurch.carrd.co/">heartlurch</a>
+            》Machu art by <a href="https://heartlurch.carrd.co/">heartlurch</a>
             <br>
-            》 Foil effect on some portraits by <a
+            》Foil effect on some portraits by <a
                 href="https://www.deviantart.com/icycatelf/art/Overlapping-Type-Foil-349093246">icycatelf</a>
             <br>
-            》 All characters painted, zapped, mutated, transmogrified, divergent evolutioned, etc. by
-            Tenkowski.<!-- 
+            》All characters painted, zapped, mutated, transmogrified, divergent evolutioned, etc. by
+            Tenkowski<!-- 
             <br>
             this section is cute but perhaps I can move it somewhere else<span class="bigtext">SPECIAL THANKS</span>
             <br> 》Emi Matchu, developer of <a href="https://impress.openneo.net/">Dress To Impress</a> and the
@@ -394,7 +431,11 @@
             <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
         </p>
         <p id="timeline">
-            <img src="/images/other/flowchart.svg" class="image-svg">
+            ℹ️ Order in which things happened. Who discovered who.
+            <br>
+            If it doesn't make sense, don't think too much about it.
+            <br>
+            <a href="/images/other/flowchart.svg"><img src="/images/other/flowchart.svg" class="image-svg">
             <br>
             <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
         </p>
