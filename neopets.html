@@ -18,14 +18,14 @@
 <!--page colors and whatnot-->
 <style>
     body {
-        background-color: rgb(0, 21, 91);
+        background-color: rgb(255, 211, 34);
 
     }
 
     a:link,
     a:visited {
         text-decoration: none;
-        color: #0c2885;
+        color: #ffe600;
     }
 
     .closebox:link {
@@ -37,12 +37,12 @@
     }
 
     .bigtext {
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         font-size: 20px;
     }
 
     .bigishtext {
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         font-size: 17px;
     }
 </style>
@@ -64,10 +64,21 @@
         font-weight: bold;
     }
 
-    .container {
+    .top {
         position: relative;
-        margin: 10px;
+        top: -50%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        background-color: rgb(15, 15, 15);
+        color: rgb(255, 255, 255);
+        word-wrap: break-word;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 10px 10px black;
+        font-size: 14px;
     }
+
 
     /* main css, use this when adding more boxes */
 
@@ -76,27 +87,42 @@
         top: -50%;
         margin: 20px auto;
         width: 500px;
-        background: rgb(235, 234, 240);
-        color: rgb(0, 0, 0);
+        background: rgb(15, 15, 15);
+        color: rgb(255, 255, 255);
         word-wrap: break-word;
-        padding: 5px;
-        box-shadow: 10px 10px black;
+        padding: 10px;
         text-align: center;
-    }
+        font-weight: bold;
+        box-shadow: 10px 10px black;
+        }
+
 
     .mainy {
         position: relative;
         top: -50%;
         margin: 20px auto;
         width: 500px;
-        max-width: 900px;
-        background: rgb(235, 234, 240);
-        color: rgb(0, 0, 0);
+        background: rgb(15, 15, 15);
+        color: rgb(255, 255, 255);
         word-wrap: break-word;
-        padding: 5px;
+        padding: 10px;
         box-shadow: 10px 10px black;
         text-align: left;
     }
+
+    /*.cushion {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 600px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;   
+  }
+*/
 
     /*#notice1 {
         position: relative;
@@ -112,24 +138,15 @@
         text-align: left;
     } */
 
+    /*.container {
+        position: relative;
+        margin: 10px;
+    }*/
+
     .goleft {
         text-align: left;
     }
 
-    .top {
-        position: relative;
-        top: -50%;
-        margin-left: auto;
-        margin-right: auto;
-        width: 500px;
-        background-color: rgb(235, 234, 240);
-        color: rgb(0, 0, 0);
-        word-wrap: break-word;
-        padding: 10px;
-        text-align: center;
-        box-shadow: 10px 10px black;
-        font-size: 14px;
-    }
 
     a:hover,
     a:active {
@@ -155,7 +172,7 @@
 
     .button5 {
         background-color: #ffffff;
-        color: rgb(0, 21, 91);
+        color: rgb(0, 0, 0);
         font-style: bold;
     }
 
@@ -289,47 +306,44 @@
 <!-- content starts here -->
 
 <body>
-    <div class="top"><a href="/">HOME</a> > NEOPETS</div>
-
 
     <!--<div id="notice1">
         ⚠️ Notices would go here if there's something new and important to say to the visitors. <span class="clickable" onclick="myFunction()">[close this message]</span> -->
+    <div class="top"><a href="/">HOME</a> > NEOPETS</div>
     <div class="main">
-        <div class="container">
-            <a href="/tenko"><img src="/images/portraits/portrait_tenko.png"></a>
-            <a href="/caci"><img src="images/portraits/portrait_caciwagua.png"></a>
-            <a href="/ranka"><img src="images/portraits/portrait_rankamaru.png"></a>
-            <a href="/vim"><img src="/images/portraits/portrait_vim.png"></a>
-            <a href="/sosa"><img src="/images/portraits/portrait_sosa.png"></a>
-            <a href="/qiru"><img src="images/portraits/portrait_qiru.png"></a>
-            <a href="/lasak"><img src="images/portraits/portrait_lasaklang.png"></a>
-            <a href="/roku"><img src="images/portraits/portrait_roku.png"></a>
-            <a href="/sphoryx"><img src="images/portraits/portrait_sphoryx.png"></a>
-            <a href="/jico"><img src="images/portraits/portrait_jico.png"></a>
-            <a href="/taji"><img src="images/portraits/portrait_taji.png"></a>
-            <a href="/heige"><img src="images/portraits/portrait_heige.png"></a>
-            <a href="/qm"><img src="images/portraits/portrait_quma.png"></a>
-            <a href="/yura"><img src="images/portraits/portrait_yura.png"></a>
-            <a href="/turu"><img src="images/portraits/portrait_turu.png"></a>
-            <a href="#expand"><button class="buttony button5"> 🔽 EXPAND 🔽 </button></a>
-            <p id="expand">
-ℹ️ Showing alt. versions of Tenko and additional Neopets.
-<br>
-                <a href="/roninko"><img src="images/portraits/portrait_roninko.png"></a>
-                <a href="/猫天口"><img src="/images/portraits/portrait_nekotenko.png"></a>
-                <a href="/caruso"><img src="/images/portraits/portrait_caruso.png"></a>
-                <br>
-                <!--
+
+        <a href="/tenko"><img src="/images/portraits/portrait_tenko.png"></a>
+        <a href="/caci"><img src="images/portraits/portrait_caciwagua.png"></a>
+        <a href="/ranka"><img src="images/portraits/portrait_rankamaru.png"></a>
+        <a href="/vim"><img src="/images/portraits/portrait_vim.png"></a>
+        <a href="/sosa"><img src="/images/portraits/portrait_sosa.png"></a>
+        <a href="/qiru"><img src="images/portraits/portrait_qiru.png"></a>
+        <a href="/lasak"><img src="images/portraits/portrait_lasaklang.png"></a>
+        <a href="/roku"><img src="images/portraits/portrait_roku.png"></a>
+        <a href="/sphoryx"><img src="images/portraits/portrait_sphoryx.png"></a>
+        <a href="/jico"><img src="images/portraits/portrait_jico.png"></a>
+        <a href="/taji"><img src="images/portraits/portrait_taji.png"></a>
+        <a href="/heige"><img src="images/portraits/portrait_heige.png"></a>
+        <a href="/qm"><img src="images/portraits/portrait_quma.png"></a>
+        <a href="/yura"><img src="images/portraits/portrait_yura.png"></a>
+        <a href="/turu"><img src="images/portraits/portrait_turu.png"></a>
+        <a href="#expand"><button class="buttony button5"> <i>SHOW MORE...</i> </button></a>
+        <p id="expand">
+            <a href="/roninko"><img src="images/portraits/portrait_roninko.png"></a>
+            <a href="/猫天口"><img src="/images/portraits/portrait_nekotenko.png"></a>
+            <a href="/caruso"><img src="/images/portraits/portrait_caruso.png"></a>
+            <br>
+            <!--
             <br>
             》 Tenko is reborn as a heavily mutated mammal left to fend for itself in a post-post apocalypic world and is
             called Roninko.
             <br>
             》 Tenko had they not isekai'd into Neopia in 2020, that's Neko Tenko.
             -->
-                <a href="/sirubiru"><img src="images/portraits/portrait_sirubiru.png" class="image-cut"> <a
-                        href="/machu"><img src="images/portraits/portrait_machu.png"></a>
-                    <br>
-                    <!--condensing this page. will move this info elsewhere<br>
+            <a href="/sirubiru"><img src="images/portraits/portrait_sirubiru.png" class="image-cut"> <a
+                    href="/machu"><img src="images/portraits/portrait_machu.png"></a>
+                <br>
+                <!--condensing this page. will move this info elsewhere<br>
                 》 Veirs and Senja are still good friends with Tenko and sometimes still work with them, but the two are
                 often off doing their own research.
                 <br>
@@ -337,22 +351,21 @@
                 <br>
                 ※ It's not clear if the Neopets in this section will become active again, but don't expect the most up
                 to date art and info here.-->
-                    <a href="https://www.neopets.com/userlookup.phtml?user=lol_99"><img
-                            src="images/portraits/portrait_andmore.png"></a>
-                    <br>
-                    <a href="#"><button class="buttony button6">CLOSE THIS BOX</button></a>
+                <a href="https://www.neopets.com/userlookup.phtml?user=lol_99"><img
+                        src="images/portraits/portrait_andmore.png"></a>
+                <br>
+                <a href="#"><button class="buttony button6">CLOSE</button></a>
 
-            </p>
-
-        </div>
-    </div>
+        </p>
 
     </div>
     <div class="mainy">
-        <a href="#what"><button class="button button5"> ABOUT </button></a>
-        <!--<a href="#how"><button class="button button5"> GUIDE </button></a>-->
-        <a href="#credits"><button class="button button5"> CREDITS</button></a>
-        <a href="#timeline"><button class="button button5"> TIMELINE </button></a>
+        <center>
+            <a href="#what"><button class="button button5"> ABOUT </button></a>
+            <!--<a href="#how"><button class="button button5"> GUIDE </button></a>-->
+            <a href="#credits"><button class="button button5"> CREDITS</button></a>
+            <a href="#timeline"><button class="button button5"> TIMELINE </button></a>
+        </center>
 
         <p id="what">
             <span class="bigtext">THIS IS TENKO</span>
@@ -372,30 +385,31 @@
             <br> <br> The guild is more than a team, it's family!!!
             <br> ... Vim groaned and facepalmed at that last part ...
             <br>
-            <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
+            <a href="#"><button class="button button6">CLOSE</button></a>
         </p>
-        <p id="how">
-            <span class="bigtext">HOW TO NAVIGATE</span>
-            <br>
-            Look for these things in each page:<br>
-
-            ※ <u>References</u>: Glimpse at what they look like
-            <br>
-            ※ <u>Avatars</u>: Their personality, described in Neoboard avatars
-            <br>
-            ※ <u>Playlist</u>: A song or two or more relatable to them
-            <br>
-            ※ <u>Lore</u>: Stories and more to learn about them
-            <br>
-            ※ <u>Art</u>: Extra art goes near the bottom of pages
-            <br>
-            ※<u>Art Credit</u>: Artists are always credited here!
-            <br>
-            ※ <img src="/images/other/faviconV2.png" class="favicon">: See the Neopets star next to a link? That
-            means it'll take you to a page on Neopets.com (you likely need to be signed in)
-            <br>
-            <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
-        </p>
+        <!--<p id="how">
+                <span class="bigtext">HOW TO NAVIGATE</span>
+                <br>
+                Look for these things in each page:<br>
+    
+                ※ <u>References</u>: Glimpse at what they look like
+                <br>
+                ※ <u>Avatars</u>: Their personality, described in Neoboard avatars
+                <br>
+                ※ <u>Playlist</u>: A song or two or more relatable to them
+                <br>
+                ※ <u>Lore</u>: Stories and more to learn about them
+                <br>
+                ※ <u>Art</u>: Extra art goes near the bottom of pages
+                <br>
+                ※<u>Art Credit</u>: Artists are always credited here!
+                <br>
+                ※ <img src="/images/other/faviconV2.png" class="favicon">: See the Neopets star next to a link? That
+                means it'll take you to a page on Neopets.com (you likely need to be signed in)
+                <br>
+                <a href="#"><button class="button button6">CLOSE</button></a>
+            </p>
+        -->
         <p id="credits">
             <u>MAIN ART FOR THE GUILD PROVIDED BY:</u>
             <br>
@@ -417,29 +431,29 @@
             <br>
             》All characters painted, zapped, mutated, transmogrified, divergent evolutioned, etc. by
             Tenkowski<!-- 
-            <br>
-            this section is cute but perhaps I can move it somewhere else<span class="bigtext">SPECIAL THANKS</span>
-            <br> 》Emi Matchu, developer of <a href="https://impress.openneo.net/">Dress To Impress</a> and the
-            volunteers who model new colors and wearables for the site.
-            <br> 》<a href="https://www.clairehummel.com/">Claire Hummel</a>, for her big contributions
-            to Neopets art and design, including making the Darigan Bori.
-            <br> 》<a href="https://www.furaffinity.net/user/metrohunter">Tuli</a>, bully and sometimes the better Bori.
-            <br> 》<a href="https://www.dominiquedeleon.com/fursuits">Dominique De Leon</a>, passionate creator of the
-            Tenko fursuit, extremely pleasant maker to work with. -->
+                <br>
+                this section is cute but perhaps I can move it somewhere else<span class="bigtext">SPECIAL THANKS</span>
+                <br> 》Emi Matchu, developer of <a href="https://impress.openneo.net/">Dress To Impress</a> and the
+                volunteers who model new colors and wearables for the site.
+                <br> 》<a href="https://www.clairehummel.com/">Claire Hummel</a>, for her big contributions
+                to Neopets art and design, including making the Darigan Bori.
+                <br> 》<a href="https://www.furaffinity.net/user/metrohunter">Tuli</a>, bully and sometimes the better Bori.
+                <br> 》<a href="https://www.dominiquedeleon.com/fursuits">Dominique De Leon</a>, passionate creator of the
+                Tenko fursuit, extremely pleasant maker to work with. -->
 
             <br>
-            <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
+            <a href="#"><button class="button button6">CLOSE</button></a>
         </p>
         <p id="timeline">
-            ℹ️ Order in which things happened. Who discovered who.
-            <br>
-            If it doesn't make sense, don't think too much about it.
-            <br>
             <a href="/images/other/flowchart.svg"><img src="/images/other/flowchart.svg" class="image-svg">
-            <br>
-            <a href="#"><button class="button button6">CLOSE THIS BOX</button></a>
+                <br>
+                <a href="#"><button class="button button6">CLOSE</button></a>
         </p>
     </div>
+    </div>
+    </div>
+
+
 </body>
 
 </html>
