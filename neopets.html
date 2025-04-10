@@ -252,10 +252,16 @@
         display: block;
     }
 
-    #expand {
+    #expand  {
         display: none;
         text-align: left;
+        margin: 0;
     }
+
+    .img {
+    margin: 0;
+    padding: 0;
+}   
 
     #expand:target {
         display: block;
@@ -273,6 +279,20 @@
         width: 100%;
         height: 100%;
     }
+
+    .image-expand {
+        width: 300px;
+        height: 300px;
+        object-fit:contain;
+        object-position: left;
+        overflow: hidden;
+    }
+
+    /* Adjust position of portrait_roninko when preceded by portrait_nekotenko */
+img[src="/images/portraits/portrait_nekotenko.png"] + img[src="/images/portraits/portrait_roninko"] {
+    position: relative;
+    top: -150px;
+}
 </style>
 
 <script>
@@ -329,9 +349,12 @@
         <a href="/turu"><img src="images/portraits/portrait_turu.png"></a>
         <a href="#expand"><button class="buttony button5"> <i>SHOW MORE...</i> </button></a>
         <p id="expand">
+            <a href="/ilalo"><img src="/images/portraits/portrait_ilalo.png" class="image-expand"></a>
+            <br>
             <a href="/roninko"><img src="images/portraits/portrait_roninko.png"></a>
             <a href="/猫天口"><img src="/images/portraits/portrait_nekotenko.png"></a>
-            <a href="/caruso"><img src="/images/portraits/portrait_caruso.png"></a>
+            <a href="/caruso"><img src="/images/portraits/portrait_caruso.png">
+            
             <br>
             <!--
             <br>
