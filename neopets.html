@@ -18,7 +18,9 @@
 <!--page colors and whatnot-->
 <style>
     body {
-        background-color: rgb(253, 78, 78);
+        background-color: rgb(0, 0, 0);
+        background-image: url("/images/other/sph30.webm");
+        ;
 
     }
 
@@ -38,7 +40,7 @@
 
     .bigtext {
         color: rgb(255, 255, 255);
-        font-size: 20px;
+        font-size: 23px;
     }
 
     .bigishtext {
@@ -178,7 +180,7 @@
 
     .button6 {
         background-color: #313131;
-        color: #ff3434;
+        color: #ff4242;
         font-style: bold;
     }
 
@@ -318,7 +320,21 @@
         width: 100%;
         height: 100%;
         max-width: fit-content;
-    }</style>
+    }
+
+    #background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-image.png'); /* Replace with your image URL */
+    background-repeat: repeat; /* Repeats on x and y axes */
+    background-size: auto; /* Prevents stretching */
+    z-index: -1; /* Ensure it stays behind all content */
+    pointer-events: none; /* Prevent selection or interaction */
+}
+</style>
 
 <script>
     function myFunction() {
@@ -351,66 +367,58 @@
 <!-- content starts here -->
 
 <body>
-
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="/images/other/sph30.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
     <!--<div id="notice1">
         ⚠️ Notices would go here if there's something new and important to say to the visitors. <span class="clickable" onclick="myFunction()">[close this message]</span> -->
-    
-        <div class="top"><img src="/images/other/allneopets.png"class="image-ignore">
-            <a href="/">NEOPETS.LGBT</a> / NEOPETS
 
-</div>
+    <div class="top"><img src="/images/other/allneopets.png" class="image-ignore">
+        <a href="/">NEOPETS.LGBT</a> / NEOPETS
+
+    </div>
     <div class="main">
         <a href="#daridillo"><button class="buttony button5"><I>WELCOME TO TEAM DARIDILLO!</I></button></a>
         <p id="daridillo">
             Featuring!
             <span style="display: block; border-top: 1px solid rgb(255, 255, 255); margin: 10px 0;"></span>
             <!--as of april 2025. pending confirmation, waiting if everyone is content with their role and role title before i make it final -->
-            Guildmaster:
-            <br>
-            Tenko!
-            <br>
-            <br>
-            Guildmaster's Assistants:
-            <br>
-            Rokukuyu ans Lasaklang 
-            <br><br>
-            Co-Founders:
-            <br>
-            Sosa and Qirunu
-            <br>
-            <br>
-            Dad, Daughter, Mom (Support):
-            <br>
-            Jiconayel, Caciwagua, Rankamaru
-            <br>
-            <br>
+            Guildmaster:<br>
+            Tenko!<br><br>
+
+            Co-Founders:<br>
+            Sosa and Qirunu<br><br>
+
+            Guildmaster's Assistants:<br>
+            Rokukuyu and Lasaklang <br><br>
+            
+            Support (also, Dad, Daughter, Mom!):<br>
+            Jiconayel, Caciwagua, Rankamaru<br><br>
+            
             Shaman:<br>
-            Sphoryx
-            <br>
-            <br>
+            Sphoryx<br><br>
+            
             Covert Ops:<br>
-            Vim, Yura, Qumatantara, Turuneja
-            <br>
-            <br>
-            Secretary :<br>
-            Heigelava
-            <br>
-            <br>
+            Vim, Yura, Qumatantara, Turuneja<br><br>
+            
+            Treasurer:<br>
+            Heigelava <br><br>
+            
             Housekeeping:<br>
-            Tajizeha
-            <br><br>
-            LGBT:
-            Everyone
+            Tajizeha<br><br>
+            
+            LGBT: Everyone
             <span style="display: block; border-top: 1px solid rgb(255, 255, 255); margin: 10px 0;"></span>
             <a href="#"><button class="buttony button6">CLOSE</button></a>
 
         </p>
         <a href="/tenko"><img src="/images/portraits/portrait_tenko.png"></a>
-        <a href="/roku"><img src="images/portraits/portrait_roku.png"></a>
-        <a href="/lasak"><img src="images/portraits/portrait_lasaklang.png"></a>
-
         <a href="/sosa"><img src="/images/portraits/portrait_sosa.png"></a>
         <a href="/qiru"><img src="images/portraits/portrait_qiru.png"></a>
+        <a href="/roku"><img src="images/portraits/portrait_roku.png"></a>
+        <a href="/lasak"><img src="images/portraits/portrait_lasaklang.png"></a>
+        
         <a href="/sphoryx"><img src="images/portraits/portrait_sphoryx.png"></a>
 
         <a href="/jico"><img src="images/portraits/portrait_jico.png"></a>
@@ -434,7 +442,6 @@
                 href="/caruso"><img src="/images/portraits/portrait_caruso.png" class="image-tall">
                 <br>
                 <a href="/nekotenko"><img src="/images/portraits/portrait_nekotenko.png"></a>
-                
                 <a href="/roninko"><img src="images/portraits/portrait_roninko.png"></a>
 
                 <BR>
@@ -452,19 +459,14 @@
                         <!--helpful text i think right now, will remove if I think it's TMI
                         it's truthful information tho!-->
                         Ilalo and Caruso are two unique versions of Tenko<br>
-                        each living in their own timeline and world.
-                        <br><br>
-                        Cat Tenko -- Tenko Bori -- Roninko
-                        <br>are on the same timeline.
-                        <br>
-                        Past -- Present -- Future
-                        <br> <br>
-                        Cat Tenko is Tenko, 2017 - 2020
-                        <br>Tenko Bori is Tenko, 2020 - 20XX
-                        <br>Roninko is Tenko, reincarnated XXXX years later
-                        <br>
-                        in a mutated, post-post apocalyptic world.
-                        <br>
+                        each living in their own timeline and world.<br><br>
+                        Cat Tenko -- Tenko Bori -- Roninko<br>
+                        are on the same timeline.<br>
+                        Past -- Present -- Future<br><br>
+                        Cat Tenko is Tenko, 2017 - 2020<br>
+                        Tenko Bori is Tenko, 2020 - 20XX<br>
+                        Roninko is Tenko, reincarnated XXXX years later<br>      
+                        in a mutated, post-post apocalyptic world.<br>
                         <a href="#"><button class="buttony button6">CLOSE</button></a>
                 </p>
 
@@ -538,26 +540,26 @@
             </p>
         -->
         <p id="credits">
-            <u>MAIN ART FOR THE GUILD PROVIDED BY:</u>
+            <u><span class="bigishtext">ART FOR THE GUILD PROVIDED BY:</u></span>
             <br>
-            》Row 1, 3, 4, 5 art by <a href="https://twitter.com/ferwanwan">ferwanwan</a> <br>
-            》Row 2 art by <a href="https://twitter.com/WEBPARTEEZ">webparteez</a> <br>
-            ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ ✖️ <br>
-            <u>ADDITIONAL ARTISTS:</u>
+            》<span class="bigtext"><a href="https://twitter.com/ferwanwan">ferwanwan</a></span>, for everyone, unless noted below<br>
+            》<a href="https://twitter.com/WEBPARTEEZ">webparteez</a>, for Sosa, Qiru, and Vim <br>
+            <span style="display: block; border-top: 1px solid rgb(255, 255, 255); margin: 10px 0;"></span> 
+            <span class="bigishtext"><u>ARTISTS FOR TENKO'S OTHER FORMS:</u></span>
             <br>
-            》Roninko art by <a href="https://twitter.com/felitech_">felitech</a>
-            <br>》Cat Tenko art by <a href="https://twitter.com/muttvore">chammuco</a>
-            <br>》Caruso art by <a href="https://www.aisuart.com/about">aisuart</a>
+            》<a href="https://twitter.com/felitech_">felitech</a>, for Roninko
+            <br>》<a href="https://twitter.com/muttvore">chammuco</a>, for Cat Tenko
+            <br>》<a href="https://twitter.com/RiverMakes/media">rivermakes</a>, for Caruso
+    
+            <span style="display: block; border-top: 1px solid rgb(255, 255, 255); margin: 10px 0;"></span> 
+            Some Neopets on this page are Holofoil!<br>
+            Holofoil Neopets generally have bigger pages!
             <br>
-            》Veirsiru art by <a href="https://twitter.com/kappanuki">kappanuki</a>
-            <br>
-            》Machu art by <a href="https://heartlurch.carrd.co/">heartlurch</a>
-            <br>
-            》Foil effect on some portraits by <a
-                href="https://www.deviantart.com/icycatelf/art/Overlapping-Type-Foil-349093246">icycatelf</a>
-            <br>
-            》All characters painted, zapped, mutated, transmogrified, divergent evolutioned, etc. by
-            Tenkowski<!-- 
+             》<a
+                href="https://www.deviantart.com/icycatelf/art/Overlapping-Type-Foil-349093246">icycatelf</a> kindly provided these textures
+                <span style="display: block; border-top: 1px solid rgb(255, 255, 255); margin: 10px 0;"></span> 
+            <i>All characters painted, zapped, mutated, transmogrified, divergent evolutioned, and more by
+            Tenkowski. Most members recruited by Tenko. Team Daridillo is an equal opportunity employer.</i><!-- 
                 <br>
                 this section is cute but perhaps I can move it somewhere else<span class="bigtext">SPECIAL THANKS</span>
                 <br> 》Emi Matchu, developer of <a href="https://impress.openneo.net/">Dress To Impress</a> and the
