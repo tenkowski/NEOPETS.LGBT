@@ -83,6 +83,7 @@
     box-shadow: 10px 10px black;
     text-align: center;
     font-weight: bold;
+    z-index: -1;
   }
 
   .mainy2 {
@@ -99,6 +100,8 @@
     box-shadow: 10px 10px black;
     text-align: center;
     font-weight: bold;
+    z-index: -1;
+
   }
 
 
@@ -247,6 +250,22 @@
   .redtext {
     color: rgb(166, 166, 166);
   }
+
+  .webringtheboom {
+  background:  tomato;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: top left;
+    z-index: 2;
+}
+
+.webringtheboom:hover {
+    -webkit-transform: scale3d(5, 5, 5);
+    transform: scale3d(5);
+    z-index: 2;
+}
 </style>
 
 
@@ -332,7 +351,9 @@
       href="https://impress-2020.openneo.net/outfits/2035215" target="_blank">OPENNEO </a>
 
   </div>
-
+<div class="webringtheboom">
+  <img src="/images/characters/tenko/boo.png"></div>
+</div>
   <div class="mainy">
     <img src="/images/gifs/bori.gif" title="Bori!"><img src="/images/gifs/grumpybori.gif" title="Grumpy!"><img
       src="/images/gifs/hic_armin.gif" title="Tiny But Tough!"><img src="/images/gifs/minion.gif"
