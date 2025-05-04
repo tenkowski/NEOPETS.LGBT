@@ -80,7 +80,63 @@
     color: rgb(83, 255, 152);
   }
 </style>
+<script src="jquery-1.7.js" type="text/javascript"></script>
+<script type='text/javascript'>
+    //<![CDATA[
+    $(window).load(function () {
+        var audio;
+        var playlist;
+        var tracks;
+        var current;
 
+        init();
+        function init() {
+            current = 0;
+            audio = $('audio');
+            playlist = $('#playlist');
+            tracks = playlist.find('li a');
+            len = tracks.length - 1;
+            audio[0].volume = 1;
+            audio[0].play();
+            playlist.find('a').click(function (e) {
+                e.preventDefault();
+                link = $(this);
+                current = link.parent().index();
+                run(link, audio[0]);
+            });
+            audio[0].addEventListener('ended', function (e) {
+                current++;
+                if (current == len) {
+                    current = 0;
+                    link = playlist.find('a')[0];
+                } else {
+                    link = playlist.find('a')[current];
+                }
+                run($(link), audio[0]);
+            });
+        }
+        function run(link, player) {
+            player.src = link.attr('href');
+            par = link.parent();
+            par.addClass('active').siblings().removeClass('active');
+            audio[0].load();
+            audio[0].play();
+        }
+    });//]]> 
+
+    $(function () {
+        $(".img-swap").live('click', function () {
+            if ($(this).attr("class") == "img-swap") {
+                this.src = this.src.replace("_sfw", "_nsfw");
+            } else {
+                this.src = this.src.replace("_nsfw", "_sfw");
+            }
+            $(this).toggleClass("on");
+        });
+    });
+
+
+</script>
 <!-- content starts here -->
 
 <body>
@@ -93,6 +149,12 @@
 
     <br>
     <a href="/"><img src="/images/other/GOODBOY.gif"></a></div>
+  <div class="mainy"><audio controls="" id="audio" autoplay="false" tabindex="0"></audio>
+
+    <ul id="playlist">
+        <a href="/audio/other/advancedstage.mp3">★ Coloris - Advanced Stage</a>
+</ul>
+</div>
 <div class="mainy">If you were looking for a page:
   <br><br>
 The page is not ready yet. <a href="https://github.com/tenkowski/NEOPETS.LGBT">
@@ -103,7 +165,7 @@ Check GITHUB to see what I'm working on.</a>
 
   It was likely deleted because it was unneeded, or it was renamed.  </div>
   <div class="mainy">Note to friends/artists:
-    <br><br> I will keep any small file you wanna upload to my server indefinitely, and it should never 404.
+    <br><br> I'll keep any small file you wanna upload to my server indefinitely - it should never 404.
     <br><br>
    However any file I give you with /temporary/ in its URL will be wiped after it serves its purpose. </div>
 </body>
