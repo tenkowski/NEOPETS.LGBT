@@ -2,3 +2,5 @@ audio/
 downloads/
 images/
 videos/
+.DS_Store
+.vscode/settings.json
