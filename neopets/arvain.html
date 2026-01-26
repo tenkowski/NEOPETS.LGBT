@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!--title-->
+    <title>TRANSGENDER.DOG</title>
+    <!--favicon-->
+    <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+
+    <!-- The Fredoka front is loaded locally. To load Fredoka from Google, remove this comment. 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet"> -->
+
+    <!--zooms page on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />≈
+
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+
+    body {
+        /* background and generic font settings */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: rgb(34, 34, 34);
+        height: 100%;
+        background-image: url(/transgender/index/bg.jpg);
+
+    }
+
+    /* if font is loaded locally, remove line 3 */
+    @font-face {
+        font-family: 'Fredoka';
+        src: url('/transgender/fonts/Fredoka-Variable.ttf') format('truetype');
+        font-weight: 300 700;
+        font-stretch: 75% 125%;
+        font-style: normal;
+    }
+
+    .main {
+        /* all boxes go in here, and rely on this */
+        position: relative;
+        top: -50%;
+        margin: 20px auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        background: rgb(211, 237, 234);
+        color: rgb(108, 78, 57);
+        word-wrap: break-word;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        border: 2px solid rgb(108, 78, 57);
+    }
+
+    /* allows box2 and box3 to touch */
+    .main-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    /* style to keep jolteon and tables next to it in place */
+    .gif-toppy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgb(108, 78, 57);
+    }
+
+    .box1 {
+        /* pike/fen feral art */
+        position: relative;
+        top: -50%;
+        margin: 0px auto;
+        width: 100%;
+        max-width: 600px;
+        background: rgb(211, 237, 234);
+        color: rgb(0, 0, 0);
+        word-wrap: break-word;
+        font-weight: bold;
+        border-bottom: 1px solid rgb(108, 78, 57);
+
+    }
+
+    .box1x {
+        /* pike/fen feral art */
+        position: relative;
+        top: -50%;
+        margin: 0px auto;
+        width: 100%;
+        max-width: 600px;
+        background: rgb(211, 237, 234);
+        color: rgb(108, 78, 57);
+        word-wrap: break-word;
+        font-family: Fredoka;
+        font-weight: 2;
+        /* not using for facet page border-bottom: 1px solid rgb(108, 78, 57);*/
+
+    }
+
+    .box4 {
+        /* links  */
+        position: relative;
+        top: -50%;
+        margin: 0px auto;
+        width: 100%;
+        max-width: 600px;
+        background: rgb(211, 237, 234);
+        color: rgb(108, 78, 57);
+        word-wrap: break-word;
+        font-weight: bold;
+        border-top: 1px solid rgb(108, 78, 57);
+        padding-top: 10px;
+        font-size: 12px;
+    }
+
+    /* table stuff below */
+
+    .float-left {
+        /*working on... table */
+        position: absolute;
+        left: 0;
+    }
+
+    .float-right {
+        /* convention table */
+        position: absolute;
+        right: 0;
+    }
+
+    .float-center {
+        /* centers the links tables with a bigger font */
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+    }
+
+    table {
+        /* table style for gif-toppy */
+        border-collapse: collapse;
+        border: 1px solid rgb(108, 78, 57);
+        font-size: 10px;
+    }
+
+    td {
+        /* draws lines for tables */
+        padding: 2px 4px;
+        border-left: 1px solid rgb(108, 78, 57);
+        border-right: 1px solid rgb(108, 78, 57);
+        white-space: nowrap;
+    }
+
+    tr:first-child td {
+        /* draws lines for tables */
+        border-top: 1px solid rgb(108, 78, 57);
+    }
+
+    tr:last-child td {
+        /* draws lines for tables */
+        border-bottom: 1px solid rgb(108, 78, 57);
+    }
+
+    td.ex {
+        /* makes the link tables bigger */
+        padding: 2px 40px;
+        border-left: 1px solid rgb(108, 78, 57);
+        border-right: 1px solid rgb(108, 78, 57);
+    }
+
+    /* additional customization */
+    a:link,
+    a:visited {
+        color: rgb(145, 86, 9);
+        text-decoration: none;
+    }
+
+    .bolda {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 22px;
+        color: rgb(173, 137, 104);
+    }
+
+    /* keeps pics within main */
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .cropper {
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .cropper img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center center;
+        /*centers crop vertically */
+        display: block;
+    }
+</style>
+
+<!-- content starts here -->
+
+<body>
+
+    <div class="main">
+
+        <div class="gif-toppy">
+            <table class="float-left">
+                <tr>
+                    <td><a href=/neopets>neopets</a> > arvain</td><!--<td>Arvain</td>-->
+                </tr>
+            </table>
+            <a href="/"> <img src="/transgender/index/gif/shinyjolteon.gif"></a>
+            <table class="float-right">
+                <tr>
+                    <td><a href="https://transgender.neopets.lgbt">transgender.neopets.lgbt</a></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="box1">
+            <div class="cropper"><img src="/transgender/index/image02.png"></div>
+        </div>
+        <div class="box1x">
+            <p>
+
+
+
+            </p>
+            <img src="/transgender/images/facets/ferals.png" height="90%" width="90%">
+            <br>
+            <b>ARVAIN, DARIGAN LUPE
+                <br>
+                VIEW ON: <a href="https://www.neopets.com/petlookup.phtml?pet=Arvain">NEOPETS</a> | <a
+                    href="https://impress.openneo.net/outfits/3277481">OPENNEO</a>
+        </div>
+    </div>
+    </div>
+    <div class="main">
+        Style
+    </div>
+</body>
