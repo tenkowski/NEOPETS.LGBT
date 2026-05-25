@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!--title-->
+    <title>HEIGE | NEOPETS.LGBT</title>
+    <!--favicon-->
+    <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+    <!--current site font: Arvo-->
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+    <!-- emoji support-->
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+    <!--zooms page on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+<style>
+    /* begin body css */
+    body {
+        font-family: 'Fira Code', monospace;
+        font-size: 12px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: rgb(55, 59, 63);
+        height: 100%;
+    }
+
+    /* top css */
+    .top {
+        position: relative;
+        top: -50%;
+        margin: 20px auto;
+        width: 70%;
+        max-width: 700px;
+        background: rgb(26, 26, 26);
+        color: rgb(255, 255, 255);
+        word-wrap: break-word;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 10px 10px black;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* main css, use this when adding more boxes */
+    .main {
+        position: relative;
+        top: -50%;
+        margin: 20px auto;
+        width: 70%;
+        max-width: 700px;
+        background: rgb(26, 26, 26);
+        color: rgb(255, 255, 255);
+        word-wrap: break-word;
+        padding: 10px;
+        box-shadow: 10px 10px black;
+        text-align: left;
+        font-weight: bold;
+    }
+
+
+    /* begin link colors and decorations */
+
+    a:link,
+    a:visited {
+        color: rgb(255, 245, 109);
+    }
+
+
+    a:link,
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: underline;
+    }
+
+    /* begin misc fixes */
+    /* prevents images from overflowing */
+    img {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<script src="/jquery-1.7.js" type="text/javascript"></script>
+<script type='text/javascript'>
+    //<![CDATA[
+    $(window).load(function () {
+        var audio;
+        var playlist;
+        var tracks;
+        var current;
+
+        init();
+        function init() {
+            current = 0;
+            audio = $('audio');
+            playlist = $('#playlist');
+            tracks = playlist.find('li a');
+            len = tracks.length - 1;
+            audio[0].volume = 1;
+            audio[0].play();
+            playlist.find('a').click(function (e) {
+                e.preventDefault();
+                link = $(this);
+                current = link.parent().index();
+                run(link, audio[0]);
+            });
+            audio[0].addEventListener('ended', function (e) {
+                current++;
+                if (current == len) {
+                    current = 0;
+                    link = playlist.find('a')[0];
+                } else {
+                    link = playlist.find('a')[current];
+                }
+                run($(link), audio[0]);
+            });
+        }
+        function run(link, player) {
+            player.src = link.attr('href');
+            par = link.parent();
+            par.addClass('active').siblings().removeClass('active');
+            audio[0].load();
+            audio[0].play();
+        }
+    });//]]> 
+
+    $(function () {
+        $(".img-swap").live('click', function () {
+            if ($(this).attr("class") == "img-swap") {
+                this.src = this.src.replace("_sfw", "_nsfw");
+            } else {
+                this.src = this.src.replace("_nsfw", "_sfw");
+            }
+            $(this).toggleClass("on");
+        });
+    });
+
+
+</script>
+<!-- content starts here -->
+
+<body>
+
+    <div class="top">
+        <a href="/neopets">NEOPETS </a> >> HEIGE</a>
+    </div>
+    <div class="main">
+        <img src="/images/characters/heige/heige_box.png" width="90%" height="90%">
+        <br>
+        HEIGE
+        <BR>
+        FIRE XWEETOK
+        <BR>
+        ROLE: AUTHORITY / DPS 
+        <br>
+        <a href="https://impress-2020.openneo.net/outfits/3109716">OPENNEO</a><a
+            href="https://www.neopets.com/petlookup.phtml?pet=Heigelava">NEOPETS</a>
+    </div>
+
+    <div class="main">
+        Let’s get this out of the way first. Heige looks bald and doesn’t expel fire like a regular Fire Xweetok because
+        she has a condition! In fact, she controls it. yes, she can somewhat control when that fire starts spewing out
+        of her head and back. We joked it’s because she knows how to keep a cool head compared to other Fire Xweetok.
+        <br><br>
+        Heige has risen the corporate world to become a pretty high up there employee at Altador Cup Headquarters
+        International. She funded the orange, custom-made Robot Xweetok housing for her hind, which can withstand temperatures up to a whopping 1500C — well
+        above the usual temperature her flames clock in at. It’s not too often she needs it, but the option is there,
+        and not to mention it looks cool as fuck.
+    </div>
+
+    <div class="main">
+        Aha! A golden envelope in the guild’s inbox! Score! Rip rip rip… woah. Tenko’s jaw dropped as he read the
+        contents of the opened envelope. It was an invitation to Altador from a VIP client, and it specifically
+        requested Guildmaster Tenko.
+        <br><br>
+        Fair, fair.” Tenko was a little disappointed he was not allowed to bring another
+        member with him, but understood the importance the letter beared. If the client was labeled as a VIP and it came
+        from Altador, surely there must be a good reason why he was specifically requested. Job requests from Altador
+        are quite rare, and often come from an organization or a wealthy client. So Tenko set flight to Altador.
+        <br><br>
+        Tenko presented his job request to the border patrol of Altador so that they could verify and ascertain Tenko’s
+        job contract. It passed all checks, and the envelope was given back to Tenko, alongside an address to the
+        client. One Cup Way, Altador, 0008
+        <br><br>
+        Wow! That’s the address to Altador Cup Headquarters! Heh, and the postal code matches with the founding year of
+        the Altador Cup (Y8)
+        <br><br>
+        Tenko got buzzed into his client’s room. While waiting for the door to open, Tenko thought of who it could be.
+        Surely, not his player crush, that stunning striker Coco Metrone. This building didn’t seem like the place the
+        stars of the Altador Cup would visit, it was very formal and full of businesspeople.
+        <br><br>
+        “Hellooo!!~” the Darigan Bori heard before he could even see his clients face. So eager. “Come on in!”
+        <br><br>
+        Ooh. Oooooohff. That’s…
+        <br><br>
+        That’s a really underdressed Fire Xweetok inside Altador Cup Headquarters.
+        <br><br>
+        It’s like she was just getting ready to go to beach or something. Five seconds into the room and he can already
+        see her butt from the front — that girl looks like she’s at the BEACH.
+        <br><br>
+        “Sorry, sorry, it’s a long story.”
+        <br><br>
+        She tells you about how she managed to find temporary housing at headquarters with a bit of white lying. A few
+        days ago she had snuck in through the back door of the building and into the room, somehow, without being
+        detected. The next morning, she “checked-in” from the room and claimed she was sick and needed to quarantine.
+        But what had really happened was that Heige was doing deals outside the building that… she would rather not
+        share. Because if she told HQ what really happened, someone was surely going to get punished, and she wanted no
+        one getting in trouble.
+        <br><br>
+        Oh, man, at first you thought this was going to be your first grandiose mission, the life changing golden
+        envelope quest, the big haul, but really, this Fire Xweetok lady used you and the golden envelope to benefit
+        her.
+        <br><br>
+        “I’m, just going to go. I think I have the wrong client.”
+        <br><br>
+        “Wait, Tenko!”
+        <br><br>
+        Eh? She knows my name?
+        <br><br>
+        She runs up to Tenko, pressing her nose against Tenko’s while Tenko furrows his brow.
+        <br><br>
+        “Please, I want you.” “I want you to help me out with this because I think you’re the only one who can do it. I
+        made a mistake, I’m sorry. But I promise, I won’t give you a hard time, and I will pay you and your guild
+        handsomely. But I understand if you do not wish to continue.” she said while rubbing her head against Tenko’s
+        chest.
+        <br><br>
+        “Grr. The pay, huh?”
+        <br><br>
+        “Well, you truly are Altador Cup personnel. I can see it in your wristband and badge hanging on the bed. But how
+        can you guarantee my confidentiality and rewards in this mission?”
+        <br><br>
+        “I will tell you after, but headquarters will know nothing of this, I guarantee it, if you follow my
+        directions.”
+        <br><br>
+        “Mmm, good girl, keeping us both out of trouble. Let’s see it through.” said Tenko, rubbing his head against
+        hers.
+        <br><br>
+        “So, before I get too relaxed here… what’s the mission?”
+        <br><br>
+        “I just need you to run to the nearest Neopian Shop to grab me some food and supplies, I’m starving here and
+        worried about my health.”
+        <br><br>
+        “Second, I need to you, uh, find the guy who took my belongings and bring them back. Don’t hurt the guy or let
+        him see your face. If you do this after the first thing, it’ll probably be sunset already. Oh, and I put a
+        tracker on my belongings. I hope he hasn’t found out and thrown it away yet.”
+        <br><br>
+        (Pfft. Okay, that IS easy. Too easy.
+        <br><br>
+        I’m again doubting if this Xwee is serious. She’s looks so disheveled right now, but, I can’t help but
+        understand her. After everything she’s told me, she’s probably stressed the hell out and, hopefully, is offering
+        me and the guild a nice reward out of desperation. I’ll do it.)
+        <br><br>
+        “This won’t take long, I’ll do it. In fact, do you want to come along with me for the first part? You look like
+        you could need it…”
+        <br><br>
+        “How are we going to do that without leaving the room? They think I’m bedridden in here!”
+        <br><br>
+        “Yeah, and sooner rather than later they’re going to kick you out for lying or call an ambulance if you keep
+        faking your illness, and that benefits no one.”
+        <br><br>
+        “I know…”
+        <br><br>
+        “So hop on.”
+        <br><br>
+        “Whaaa~?”
+        <br><br>
+        Tenko whips out his Rod of Dark Nova with quite a bit of charge left, and they fly out the window like witches.
+        <br><br>
+        “Uhhh, I’m going to take a little detour. We’re going closer to shore. At least there it’ll look like you’re
+        dressed for the occasion.”
+        <br><br>
+        “Haha, stop it you!”
+        <br><br>
+        An extra five minutes later, they arrive on the outskirts of Altador.
+        <br><br>
+        (Mmmh, Gourmet Club food on the beach… feels nice to eat with Altador Cup’s business card)
+        <br><br>
+        (Well that was quick. And we got the other supplies she wanted too. I can see her smile growing every minute.
+        I’m doing good today, at least. I’m also glad we got to spend a while on the beach as well, it’s not often I get
+        to do this, more so with a client in the middle of a job. This kind of rules…)
+        <br><br>
+        “Now, your bag. Can I see your phone to see its location?”
+        <br><br>
+        “Oh yes, sure, give me one moment, my phone is a bit slow, I have so much junk on it…”
+        <br><br>
+        …
+        <br><br>
+        “Here we go! It’s in, a house. Damn.”
+        <br><br>
+        (Ugh. If only I still had Machu on the team, I could’ve asked her to phase through the wall to get it. But even
+        if she was still here, she’d probably object to that, even if she knew we weren’t stealing.)
+        <br><br>
+        “Hmm, I have a silly idea, but it is very situational. Let’s go to the house, but not get too close. And not for
+        too long either to attract any attention.”
+        <br><br>
+        “What’s your idea?”
+        <br><br>
+        “I’ll tell you on the way there. We don’t have much time.”
+        <br><br>
+        It’s rush hour, so Tenko thought of a simple idea: the owner of the house simply couldn’t be home right now,
+        right?
+        <br><br>
+        Well, they made it. No signs of any activity in the neighborhood, except a couple of Neopets playing with their
+        Petpets a couple blocks away. No vehicles either. Ok. They can get closer to the house. The reading of the bag
+        was so close to one of the windows. Is it open?
+        <br><br>
+        “Heige, I’m sorry, but can you try opening the window first? My claws…”
+        <br><br>
+        “Sure.”
+        <br><br>
+        Heige’s little paws barely budged the window up. It was unlocked, but she could not grip or force it up.
+        <br><br>
+        “Tenko, I can’t, but it is moving. Want to give it a shot?”
+        <br><br>
+        (Hmm, I really risk scratching the glass or even worse, shattering it. But fuck it, were here already, and I’m
+        doing this for my client.)
+        <br><br>
+        The tippy of Tenko’s claw fingers hooked against the bottom of the window. For a moment, it put so much stress
+        on his claw that it felt like it was going to chip off. But with one grunt of triumph he lifted the whole window
+        up. Then tore the screen mesh just enough that little Heige could fit. Thank god Xweetok are one of the smallest
+        Neopets.
+        <br><br>
+        Yes, she got it! And no one was home!
+        <br><br>
+        In, and out!
+        <br><br>
+        Ok, and to patch up the mesh…
+        <br><br>
+        “Uh, Heige?”
+        <br><br>
+        “Yes Tenky?”
+        <br><br>
+        (Oh GOD she’s already calling me that)
+        <br><br>
+        “Ngh… can you pull out some sand from your, you know? Clothes? You didn’t shake off all the sand from your body,
+        right?”
+        <br><br>
+        “No, we didn’t shower, remember? But…”
+        <br><br>
+        “But you should give me some sand!”
+        <br><br>
+        “Okok!”
+        <br><br>
+        Heige gave Tenko a clump of sand. Tenko threw the sand on the torn part of the mesh, then pressed his Rod of
+        Dark Nova against the mesh to rapidly heat and char the sand.”
+        <br><br>
+        Ehh. Imperfect, but it looks much better than it looking ripped open. He won’t notice it for a while.
+        <br><br>
+        Heige loving glomped over Tenko from behind outside the walls of the house. Ehhh?
+        <br><br>
+        “Heige, what are you doing? We have to go, this isn’t our house?!”
+        <br><br>
+        “Hehe. Come on Tenko. I know this guy’s house. He’s totally not here.”
+        <br><br>
+        “You didn’t tell me earlier?”
+        <br><br>
+        “No, I mean when I went inside the house, I saw the guy’s name on a photo on the wall. I know the guy. He’s not
+        the guy I saw a few days ago, but he’s in their circles.”
+        <br><br>
+        “Also, guy has a “proud parent of an honor role student” on his screen door and his driveway has no vehicles in
+        it, so he’s clearly away.
+        <br><br>
+        “Heh, well Heige, it was a good idea to bring you along after all.”
+        <br><br>
+        “And it looks like someone is getting a bonus when we make it back to headquarters~”
+        <br><br>
+        Nervous laughter as Tenko flies back to the room with Heige.
+        <br><br>
+        So, what was in the bag?
+        <br><br>
+        Most importantly, Heige’s work clothes. Smart that she took them off in advance. Better to have put them away
+        and risk losing them versus wearing them and having them all tattered up.
+        <br><br>
+        Now she can check out of the building without looking like a model. Imagine showing yourself at work in a bikini
+        instead of your usual business attire.
+        <br><br>
+        And the reward? 10 million NP, season pass tickets for the next Altador Cup, and free tours of the headquarters
+        by her.
+        <br><br>
+        “Ehehe, thanks Heige. But Coco Metrone has already given us season pass tickets.”
+        <br><br>
+        “Oh wow! You know her?”
+        <br><br>
+        “Yes, quite a bit actually. She was one of the 7 legends that ultimately helped me and my team charge into the
+        Citadel and revive Lord Kass…”
+        <br><br>
+        Heige’s eyes lit up wide like a bright orange sunset. She knew Tenko was her new go-to contractor.
+        <br><br>
+        “Eee! I love your work! Want to work for me again soon?”
+        <br><br>
+        “If I told you no would you spit fire at me?”
+        <br><br>
+        “If I said no to your yes would you whine and beg for me like a little Bori puppy?”
+        <br><br>
+        Tenko charged at Heige until they landed in the suite’s sofa. It was a done deal before they asked each other.
+        They fell asleep for a while together, tails intertwined, until they remembered they weren’t supposed to be
+        there. Uh oh. Well, contractor cuddle nap time will have to wait…
+        <br><br>
+        Surely this cute Xweetok well into her career at Altador Cup International has time to be a part-time guildmate with the cool kids as well yeah?
+
+    </div>
+</body>

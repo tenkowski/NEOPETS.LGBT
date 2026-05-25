@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!--title-->
+    <title>JICO | NEOPETS.LGBT</title>
+    <!--favicon-->
+    <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+
+    <!-- emoji support-->
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+    <!--zooms page on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+<style>
+    /* begin body css */
+    body {
+        font-family: 'Fira Code', monospace;
+        font-size: 12px;
+        background-color: rgba(0, 0, 0, 0.932);
+        height: 100%;
+    }
+
+    /* top css */
+    .top {
+        position: relative;
+        top: -50%;
+        margin: 20px auto;
+        width: 70%;
+        max-width: 700px;
+        background: rgb(26, 26, 26);
+        color: rgb(255, 255, 255);
+        word-wrap: break-word;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* main css, use this when adding more boxes */
+    .main {
+        position: relative;
+        top: -50%;
+        margin: 20px auto;
+        width: 70%;
+        max-width: 700px;
+        background: rgb(26, 26, 26);
+        color: rgb(255, 255, 255);
+        word-wrap: break-word;
+        padding: 10px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+
+    /* begin link colors and decorations */
+
+    a:link,
+    a:visited {
+        color: rgb(255, 5, 51);
+    }
+
+
+    a:link,
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: underline;
+    }
+
+    /* begin misc fixes */
+    /* prevents images from overflowing */
+    img {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .lasak {
+        color: rgb(245, 141, 71);
+
+    }
+
+    .jico {
+        /*color: rgb(255, 247, 94);*/
+                font-size: 20px;
+
+    }
+
+    .tenko {
+        color: rgb(71, 141, 245);
+
+    }
+
+    .bigtext {
+        color: rgb(255, 255, 255);
+        font-size: 23px;
+    }
+</style>
+<script src="/jquery-1.7.js" type="text/javascript"></script>
+<script type='text/javascript'>
+    //<![CDATA[
+    $(window).load(function () {
+        var audio;
+        var playlist;
+        var tracks;
+        var current;
+
+        init();
+        function init() {
+            current = 0;
+            audio = $('audio');
+            playlist = $('#playlist');
+            tracks = playlist.find('li a');
+            len = tracks.length - 1;
+            audio[0].volume = 1;
+            audio[0].play();
+            playlist.find('a').click(function (e) {
+                e.preventDefault();
+                link = $(this);
+                current = link.parent().index();
+                run(link, audio[0]);
+            });
+            audio[0].addEventListener('ended', function (e) {
+                current++;
+                if (current == len) {
+                    current = 0;
+                    link = playlist.find('a')[0];
+                } else {
+                    link = playlist.find('a')[current];
+                }
+                run($(link), audio[0]);
+            });
+        }
+        function run(link, player) {
+            player.src = link.attr('href');
+            par = link.parent();
+            par.addClass('active').siblings().removeClass('active');
+            audio[0].load();
+            audio[0].play();
+        }
+    });//]]> 
+
+    $(function () {
+        $(".img-swap").live('click', function () {
+            if ($(this).attr("class") == "img-swap") {
+                this.src = this.src.replace("_sfw", "_nsfw");
+            } else {
+                this.src = this.src.replace("_nsfw", "_sfw");
+            }
+            $(this).toggleClass("on");
+        });
+    });
+
+
+</script>
+<!-- content starts here -->
+
+<body>
+
+    <div class="top">
+        <a href="/">NEOPETS.LGBT</a> > <a href="/neopets">NEOPETS</a> > JICO
+
+    </div>
+    <div class="main">
+        <a href="/images/characters/jico/JicoFortes.png" target="_blank">
+            <img src="/images/characters/jico/JicoFortes.png" height="70%" width="70%">
+        </a>        <br><br>
+        <span class="jico">JICO, HALLOWEEN BORI (WIP)</span>
+        <br>
+        VIEW ON: <a href="https://www.neopets.com/petlookup.phtml">NEOPETS</a> | <a href="https://impress.openneo.net/outfits/2832847">OPENNEO</a>
+        <!--ROLE: PHOTOGRAPHER / SUPPORT-->
+        
+    </div>
+    <div class="main"><audio controls="" id="audio" autoplay="false" tabindex="0"></audio>
+
+        <ul id="playlist">
+            <a href="/audio/jico/stor.mp3">★ Squarepusher - Stor Eiglass</a>
+            <br>
+          <a href="/audio/jico/tiro.mp3">★ Arca - 
+            Tiro
+          </a>
+          
+        </ul>
+    </div>
+    <div class="main"><a href="/images/characters/jico/jico_fer.png" target="_blank"><img src="/images/characters/jico/jico_fer.png" alt="jico_fer"></a> - ferwanwan </div>
+    <div class="main"><a href="/images/characters/jico/jico_aizui.png" target="_blank"><img src="/images/characters/jico/jico_aizui.png" alt="jico_aizui"></a> - aizui </div>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!--title-->
+    <title>CARUSO | NEOPETS.LGBT</title>
+    <!--favicon-->
+    <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+    <!-- emoji support-->
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+    <!--zooms page on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+<style>
+    /* begin body css */
+    body {
+        font-family: 'Fira Code', monospace;
+        font-size: 14px;
+        height: 100%;
+        margin-left: 5px;
+        margin-right: 10px;
+        font-weight: bold;
+        background-color: rgb(58, 55, 63);
+    }
+
+    /* top css */
+    .top {
+        position: relative;
+        top: -50%;
+        margin: 20px auto;
+        width: 70%;
+        max-width: 700px;
+        background: rgb(26, 26, 26);
+        color: rgb(255, 255, 255);
+        word-wrap: break-word;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 10px 10px black;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* main css, use this when adding more boxes */
+    .main {
+        position: relative;
+        top: -50%;
+        margin: 20px auto;
+        width: 70%;
+        max-width: 700px;
+        background: rgb(26, 26, 26);
+        color: rgb(255, 255, 255);
+        word-wrap: break-word;
+        padding: 10px;
+        box-shadow: 10px 10px black;
+        text-align: left;
+        font-weight: bold;
+    }
+
+
+    /* begin link colors and decorations */
+
+    a:link,
+    a:visited {
+        color: rgb(255, 245, 109);
+    }
+
+
+    a:link,
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: underline;
+    }
+
+    /* begin misc fixes */
+    /* prevents images from overflowing */
+    img {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<script src="jquery-1.7.js" type="text/javascript"></script>
+<script type='text/javascript'>
+    //<![CDATA[
+    $(window).load(function () {
+        var audio;
+        var playlist;
+        var tracks;
+        var current;
+
+        init();
+        function init() {
+            current = 0;
+            audio = $('audio');
+            playlist = $('#playlist');
+            tracks = playlist.find('li a');
+            len = tracks.length - 1;
+            audio[0].volume = 1;
+            audio[0].play();
+            playlist.find('a').click(function (e) {
+                e.preventDefault();
+                link = $(this);
+                current = link.parent().index();
+                run(link, audio[0]);
+            });
+            audio[0].addEventListener('ended', function (e) {
+                current++;
+                if (current == len) {
+                    current = 0;
+                    link = playlist.find('a')[0];
+                } else {
+                    link = playlist.find('a')[current];
+                }
+                run($(link), audio[0]);
+            });
+        }
+        function run(link, player) {
+            player.src = link.attr('href');
+            par = link.parent();
+            par.addClass('active').siblings().removeClass('active');
+            audio[0].load();
+            audio[0].play();
+        }
+    });//]]> 
+
+    $(function () {
+        $(".img-swap").live('click', function () {
+            if ($(this).attr("class") == "img-swap") {
+                this.src = this.src.replace("_sfw", "_nsfw");
+            } else {
+                this.src = this.src.replace("_nsfw", "_sfw");
+            }
+            $(this).toggleClass("on");
+        });
+    });
+
+
+</script>
+<!-- content starts here -->
+
+<body>
+
+    <div class="top">
+        <a href="/">NEOPETS.LGBT </a> / <a href="/neopets">NEOPETS?</a> / CARUSO
+    </div>
+    <div class="main">
+
+        <img src="/images/characters/caruso/azzles_caruso.png">
+<br>
+        CARUSO, MELLOW TENKO
+        <br>
+        SPECIES: FOX-LIKE
+        <br>
+        SPIN-OFF OF TENKO FROM 2018
+
+
+    </div>
+    <div class="main">
+        <audio controls="" id="audio" autoplay="false" tabindex="0"></audio>
+        <hr>
+        <ul id="playlist">
+            <a href="/audio/caruso/breathein.mp3">★ low roar - breathe in</a>
+        </ul>
+
+    </div>
+    <div class="main">
+        <img src="/images/characters/caruso/ref_caruso.png">
+        <br>
+        Caruso is the antithesis of Tenko. Reserved more than outgoing. Laid back more than hyper. A preference for analog hobbies over the digital age. Their blue eyes and neckechief are proof that Caruso is still a "Tenko", just at the opposite side of the spectrum. 
+    </div>
+
+    <div class="main">
+        <img src="/images/characters/caruso/badge_caruso.png
+        ">
+        <br>
+<i>There was a moment Caruso was going to rewrite the timeline and be *the* Tenko, although that never happened. Afterwards, the greying started, all over his body, except for his beautiful azure eyes. Caruso became content with his new image.  </i>
+    </div>
+    <div class="main">
+        <img src="/images/characters/caruso/ac_caruso.png">
+        <br>
+        Caruso dipped in Animal Crossing juice. Isn't he the most mellow Tenko? Being a villager on an animal island. It doesn't get any chiller than this. Now where's Audie and Shino?
+    </div>
+</body>
