@@ -104,44 +104,9 @@
         text-align: left;
     }
 
-    /*.cushion {
-    position: relative;
-    top: -50%;
-    margin: 20px auto;
-    width: 600px;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    word-wrap: break-word;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;   
-  }
-*/
-
-    #notice1 {
-        position: relative;
-        top: -50%;
-        margin: 20px auto;
-        width: 500px;
-        max-width: 900px;
-        background: rgb(235, 234, 240);
-        color: rgb(0, 0, 0);
-        word-wrap: break-word;
-        padding: 5px;
-        box-shadow: 10px 10px black;
-        text-align: left;
-    }
-
-    */
-    /*.container {
-        position: relative;
-        margin: 10px;
-    }*/
-
     .goleft {
         text-align: left;
     }
-
 
     a:hover,
     a:active {
@@ -271,7 +236,6 @@
         text-align: left;
     }
 
-
     #expand:target {
         display: block;
     }
@@ -331,27 +295,6 @@
         font-style: normal;
     }
 </style>
-
-<script>
-    function myFunction() {
-        var x = document.getElementById("notice1");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-            document.cookie = "notice1Hidden=false"; // Set cookie to remember div is visible
-        } else {
-            x.style.display = "none";
-            document.cookie = "notice1Hidden=true"; // Set cookie to remember div is hidden
-        }
-    }
-
-    // Check for existing cookie on page load
-    window.onload = function () {
-        var notice1 = document.getElementById("notice1");
-        if (document.cookie.indexOf("notice1Hidden=true") !== -1) {
-            notice1.style.display = "none";
-        }
-    };
-</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -488,13 +431,11 @@
             This flowchart shows our team's history. <br><span
                 style="display: block; border-top: 1px solid rgb(255, 255, 255); margin: 10px 0;"></span>
             <a href="/images/other/flowchart.svg"><img src="/images/other/flowchart.svg" class="image-svg"
-                    loading="lazy" ≈>
+                    loading="lazy">
                 <br>
                 <a href="#"><button class="button button6">CLOSE</button></a>
         </p>
     </div>
-    </div>
-
 
 </body>
 
