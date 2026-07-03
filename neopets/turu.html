@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!--title-->
+  <title>TURU | NEOPETS.LGBT</title>
+  <!--favicon-->
+  <link rel="icon" href="https://neopets.lgbt/images/other/favicon.png">
+  <!--current site font: Arvo-->
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+  <!-- emoji support-->
+  <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+  <!--zooms page on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+<style>
+  /* begin body css */
+  body {
+    font-family: 'Space Mono';
+    font-size: 12px;
+    background: linear-gradient(to bottom, #ff71e5 0%, #3056ff 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+  }
+
+  /* top css */
+  .top {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: rgb(26, 26, 26);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 10px black;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  /* main css, use this when adding more boxes */
+  .main {
+    position: relative;
+    top: -50%;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 700px;
+    background: rgb(26, 26, 26);
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 10px;
+    box-shadow: 10px 10px black;
+    text-align: left;
+    font-weight: bold;
+  }
+
+
+  /* begin link colors and decorations */
+
+  a:link,
+  a:visited {
+    color: rgb(184, 166, 244);
+  }
+
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+
+  /* begin misc fixes */
+  /* prevents images from overflowing */
+  img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  @font-face {
+    font-family: 'Space Mono';
+    src: url('/fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    /* 700 represents Bold */
+    font-style: normal;
+  }
+</style>
+<script src="/jquery-1.7.js" type="text/javascript"></script>
+<script type='text/javascript'>
+  //<![CDATA[
+  $(window).load(function () {
+    var audio;
+    var playlist;
+    var tracks;
+    var current;
+
+    init();
+    function init() {
+      current = 0;
+      audio = $('audio');
+      playlist = $('#playlist');
+      tracks = playlist.find('li a');
+      len = tracks.length - 1;
+      audio[0].volume = 1;
+      audio[0].play();
+      playlist.find('a').click(function (e) {
+        e.preventDefault();
+        link = $(this);
+        current = link.parent().index();
+        run(link, audio[0]);
+      });
+      audio[0].addEventListener('ended', function (e) {
+        current++;
+        if (current == len) {
+          current = 0;
+          link = playlist.find('a')[0];
+        } else {
+          link = playlist.find('a')[current];
+        }
+        run($(link), audio[0]);
+      });
+    }
+    function run(link, player) {
+      player.src = link.attr('href');
+      par = link.parent();
+      par.addClass('active').siblings().removeClass('active');
+      audio[0].load();
+      audio[0].play();
+    }
+  });//]]> 
+
+  $(function () {
+    $(".img-swap").live('click', function () {
+      if ($(this).attr("class") == "img-swap") {
+        this.src = this.src.replace("_sfw", "_nsfw");
+      } else {
+        this.src = this.src.replace("_nsfw", "_sfw");
+      }
+      $(this).toggleClass("on");
+    });
+  });
+
+
+</script>
+<!-- content starts here -->
+
+<body>
+
+  <div class="top">
+    <a href="/">NEOPETS.LGBT</a>/ <a href="/neopets">NEOPETS</a> / TURU </a>
+  </div>
+  <div class="main">
+    <center>
+      <a href="/images/characters/turu/fer_turu.png" target="_blank" rel="noopener noreferrer">
+        <img src="/images/characters/turu/fer_turu.png" style="width:50%; height:auto;" alt="Nic Veirs">
+      </a>
+      <br>
+      TURUNEJA, THE ELDERLY CLOUD CYBUNNY 
+      <br>
+      <a href="https://www.neopets.com/petlookup.phtml?pet=Turuneja">NEOPETS</a> | <a
+        href="https://impress.openneo.net/outfits/3019426">OPENNEO</a>
+        <br> <i>Art: <a href="https://www.instagram.com/ferwanwan/">Ferwanwan</a></i>
+    </center>
+  </div>
+  <div class="main">
+    <audio controls="" id="audio" autoplay="false" tabindex="0"></audio>
+    <ul id="playlist">
+      <a href="/audio/turu/pearlsgirl.mp3">★ Underworld - Pearl's Girl (r18_for2026)
+        <br>
+              <a href="/audio/turu/outofmyhead.mp3">★ 1991 - Out Of My Head (ft. Cherryade)
+
+
+</a>
+  </div>
+  <div class="main">
+    <h2>Story</h2>
+    Turu is a playground rumor turned real.
+    <br><br>
+    Nobody thought much of it, but high above Neopia, there was a persistent cloud that wouldn't go away.  No matter what the weather was or how you looked at it from below, you couldn't make out what was inside.
+    <br><br>
+    Kids thought it was where their teachers went to sleep. Adults thought that was a faerie's hiding spot.
+    <br><br>
+    You know where it's going. Tenko found it first. But Tenko has no recollection of it, after being flung unconsious into the air at 20000 feet from her house.  
+    <br><br>
+    She'd been watching over Tenko. Knowing what Tenko had liked all these years. Dark spots around the eyes. Red clothing. Darigan Purple devotion. That's how she got them. 
+    <br><br>
+    <img src="/images/characters/turu/they-got.gif">
+  </div>
+  <div class="main">
+    <h2>Etymology</h2>
+    Turuneja - "Crazy Rabbit"
+    <br><br>
+    1. Turuleco: Crazy. This phrase is very colloquial and has a slightly different meaning depending on which Spanish country its used in. In Central America, it means someone who is silly or foolish. Other places, it could mean someone who's dizzy or simply off their rockers. The word is also most famously used in the children's song "La Gallina Turuleca", which is about a quirky chicken who lays eggs in the strangest places.
+    <br><br>
+    2. Coneja: Female rabbit. 
+  </div>
+</body>
