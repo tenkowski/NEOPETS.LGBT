@@ -1,0 +1,101 @@
+name: Publish site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+env:
+  AWS_REGION: us-east-1
+  BUCKET: ${{ secrets.SITE_BUCKET }}
+  DISTRIBUTION_ID: ${{ secrets.SITE_DISTRIBUTION_ID }}
+  DEPLOY_ROLE: ${{ secrets.SITE_DEPLOY_ROLE }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # need previous commit to diff changed files
+
+      - name: Detect if images changed
+        id: imgcheck
+        run: |
+          # Compare this push against the previous commit; look for image changes.
+          if git diff --name-only HEAD~1 HEAD 2>/dev/null | grep -qiE '\.(png|jpe?g|gif)$'; then
+            echo "images_changed=1" >> "$GITHUB_OUTPUT"
+            echo "Images changed -> optimization will run."
+          else
+            echo "images_changed=0" >> "$GITHUB_OUTPUT"
+            echo "No image changes -> skipping optimization."
+          fi
+
+      - name: Prepare tools
+        if: steps.imgcheck.outputs.images_changed == '1'
+        continue-on-error: true
+        run: |
+          set +e
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq gifsicle libjpeg-turbo-progs
+          OXI_VER="9.1.2"
+          curl -sSL "https://github.com/oxipng/oxipng/releases/download/v${OXI_VER}/oxipng-${OXI_VER}-x86_64-unknown-linux-gnu.tar.gz" -o /tmp/oxipng.tgz
+          tar -xzf /tmp/oxipng.tgz -C /tmp
+          sudo cp /tmp/oxipng-${OXI_VER}-x86_64-unknown-linux-gnu/oxipng /usr/local/bin/oxipng 2>/dev/null
+          sudo chmod +x /usr/local/bin/oxipng 2>/dev/null
+          exit 0
+
+      - name: Build
+        env:
+          # Only optimize images when images actually changed in this push.
+          OPTIMIZE_IMAGES: ${{ steps.imgcheck.outputs.images_changed }}
+        run: python3 build_s3_site.py
+
+      - name: Authenticate
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.DEPLOY_ROLE }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Upload static assets
+        run: |
+          aws s3 sync build "s3://${BUCKET}" \
+            --delete \
+            --exclude "*.html" \
+            --exclude "audio/*" --exclude "videos/*" --exclude "downloads/*" \
+            --cache-control "public, max-age=86400" \
+            --no-progress
+
+      - name: Upload pages
+        run: |
+          aws s3 sync build "s3://${BUCKET}" \
+            --exclude "*" --include "*.html" \
+            --content-type "text/html; charset=utf-8" \
+            --cache-control "no-cache" \
+            --no-progress
+
+      - name: Finalize content types
+        run: |
+          aws s3 cp "s3://${BUCKET}" "s3://${BUCKET}" --recursive \
+            --exclude "*" --include "*.webm" \
+            --content-type "video/webm" --metadata-directive REPLACE \
+            --cache-control "public, max-age=86400" --no-progress || true
+          aws s3 cp "s3://${BUCKET}" "s3://${BUCKET}" --recursive \
+            --exclude "*" --include "*.ttf" \
+            --content-type "font/ttf" --metadata-directive REPLACE \
+            --cache-control "public, max-age=86400" --no-progress || true
+
+      - name: Refresh cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${DISTRIBUTION_ID}" \
+            --paths "/*"
